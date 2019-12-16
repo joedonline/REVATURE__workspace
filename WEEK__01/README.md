@@ -36,3 +36,12 @@ public class App {
 ### Why is Java a high-level language? (as opposed to Assembly Language)
 
 ---
+### Why do we use Git?
+- ... feature-based workflow
+
+---
+### What is the difference between `Integer` and `int`?
+- **Integer** is a class
+- **int** is a primitive type
+
+---
