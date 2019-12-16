@@ -45,3 +45,119 @@ public class App {
 - **int** is a primitive type
 
 ---
+### `CHECKPOINT`
+
+```
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		System.out.println("Enter a number: ");
+		Integer userNumber = sc.nextInt();
+		System.out.println("Here's you number: " + userNumber);
+	}
+
+}
+```
+
+---
+### `CHECKPOINT`
+
+```
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		while (true) {
+			System.out.println("Enter an even number: ");
+			Integer userNumber = sc.nextInt();
+			if (userNumber % 2 == 0) {
+				System.out.println("It works!!");
+			} else {
+				System.out.println("It didn't work.");
+			}
+		}
+	}
+
+} // END public class AdventureApp
+```
+
+---
+### `==` vs. `Object.equals(something)`
+- Use `==` to compare numbers
+- Use `.equals(obj)` to compare objects
+
+---
+### `CHECKPOINT`
+
+```
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		Boolean hasGivenValidInput = false;
+		
+		while (!hasGivenValidInput) {
+			System.out.println("Enter the text stringexample: ");
+			String userString = sc.next();
+			if (userString.equals("stringexample")) {
+				System.out.println("It works!!");
+				hasGivenValidInput = true;
+			} else {
+				System.out.println("It didn't work.");
+			}
+		}
+	}
+
+} // END public class AdventureApp
+```
+
+---
+### `CHECKPOINT`
+
+```
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		Boolean hasGivenValidInput = false;
+		
+		while (!hasGivenValidInput) {
+			System.out.println("Enter the text stringexample: ");
+			String userString = sc.next();
+			if (userString .equalsIgnoreCase("stringexample")) {
+				System.out.println("It works!!");
+				hasGivenValidInput = true;
+			} else {
+				System.out.println("It didn't work.");
+			}
+		}
+	}
+
+} // END public class AdventureApp
+```
+
+---
+###
+
+---

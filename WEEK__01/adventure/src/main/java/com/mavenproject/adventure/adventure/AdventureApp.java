@@ -7,9 +7,18 @@ public class AdventureApp {
 	private static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		System.out.println("Enter a number: ");
-		Integer userNumber = sc.nextInt();
-		System.out.println("Here's you number: " + userNumber);
+		Boolean hasGivenValidInput = false;
+		
+		while (!hasGivenValidInput) {
+			System.out.println("Enter the text stringexample: ");
+			String userString = sc.next();
+			if (userString .equalsIgnoreCase("stringexample")) {
+				System.out.println("It works!!");
+				hasGivenValidInput = true;
+			} else {
+				System.out.println("It didn't work.");
+			}
+		}
 	}
 
-}
+} // END public class AdventureApp
