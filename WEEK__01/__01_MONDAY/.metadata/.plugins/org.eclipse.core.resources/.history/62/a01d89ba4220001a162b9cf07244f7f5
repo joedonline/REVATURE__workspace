@@ -1,0 +1,19 @@
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		System.out.println("Enter an even number: ");
+		Integer userNumber = sc.nextInt();
+		if (userNumber % 2 == 0) {
+			System.out.println("It works!!");
+		} else {
+			System.out.println("It didn't work.");
+		}
+	}
+
+} // END public class AdventureApp

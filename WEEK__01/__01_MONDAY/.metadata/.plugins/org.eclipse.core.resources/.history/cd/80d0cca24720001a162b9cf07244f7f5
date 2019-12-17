@@ -1,0 +1,24 @@
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		Boolean hasGivenValidInput = false;
+		
+		while (!hasGivenValidInput) {
+			System.out.println("Enter the text stringexample: ");
+			String userString = sc.next();
+			if (userString .equalsIgnoreCase("south")) {
+				System.out.println("Going south.");
+				hasGivenValidInput = true;
+			} else if (userString.equals("north")) {
+				System.out.println("Goint north.");
+			}
+		}
+	}
+
+} // END public class AdventureApp

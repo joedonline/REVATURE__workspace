@@ -1,0 +1,12 @@
+package com.mavenproject.adventure.adventure;
+
+public class AdventureApp {
+
+	
+	
+	public static void main(String[] args) {
+		AdventureApp adventureApp = new AdventureApp();
+		
+	}
+
+}
