@@ -1,8 +1,11 @@
-#### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace) :house: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house:
+#### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace) :house:
+#### :house: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house:
 
 ---
+# :calendar: WEEK 1
 ## Monday, Dec. 16th 2019
 
+---
 ### DEV ENVIRONMENT
 - Git
 - Spring Tool Suite (Eclipse IDE)

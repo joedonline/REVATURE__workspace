@@ -1,8 +1,9 @@
-#### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace) :house: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house:
+#### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace) :house:
+#### :house: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house:
 
 ---
-# WEEK 1
-### Tuesday, Dec. 17th 2019
+# :calendar: WEEK 1
+## Tuesday, Dec. 17th 2019
 
 ---
 ## Java:
@@ -185,3 +186,18 @@ public class HelloWorld {
 | `main()` |
 
 ![Stack in Java](java_stack.jpg)
+
+---
+## Constructors
+- __Every__ class has a Constructor
+  * If we don't specify --> default Constructor
+- Every constructor begins with either:
+  * `super()` 
+  * or `this()`
+  * if not specified --> `super()` is used
+- The Constructor **instantiates** objects
+- We call Constructors with the `new` keyword
+- The Constructor has the exact same name as the Class
+  * and is like a method with no return type.
+- You can have multiple Constructors (overloading)
+- **SIDE TERM to keep in mind: Constructor chaining
