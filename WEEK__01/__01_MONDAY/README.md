@@ -1,3 +1,6 @@
+#### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace) :house: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house:
+
+---
 ## Monday, Dec. 16th 2019
 
 ### DEV ENVIRONMENT
@@ -19,7 +22,7 @@ public class App {
 }
 ```
 
-#### Commanline commands:
+#### Commandline commands:
 - `javac App.java`
 - `java App`
 - `cat App.class`
@@ -55,7 +58,7 @@ import java.util.Scanner;
 public class AdventureApp {
 
 	private static Scanner sc = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		System.out.println("Enter a number: ");
 		Integer userNumber = sc.nextInt();
@@ -76,7 +79,7 @@ import java.util.Scanner;
 public class AdventureApp {
 
 	private static Scanner sc = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		while (true) {
 			System.out.println("Enter an even number: ");
@@ -108,10 +111,10 @@ import java.util.Scanner;
 public class AdventureApp {
 
 	private static Scanner sc = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		Boolean hasGivenValidInput = false;
-		
+
 		while (!hasGivenValidInput) {
 			System.out.println("Enter the text stringexample: ");
 			String userString = sc.next();
@@ -138,40 +141,10 @@ import java.util.Scanner;
 public class AdventureApp {
 
 	private static Scanner sc = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		Boolean hasGivenValidInput = false;
-		
-		while (!hasGivenValidInput) {
-			System.out.println("Enter the text stringexample: ");
-			String userString = sc.next();
-			if (userString .equalsIgnoreCase("stringexample")) {
-				System.out.println("It works!!");
-				hasGivenValidInput = true;
-			} else {
-				System.out.println("It didn't work.");
-			}
-		}
-	}
 
-} // END public class AdventureApp
-```
-
----
-### `CHECKPOINT`
-
-```
-package com.mavenproject.adventure.adventure;
-
-import java.util.Scanner;
-
-public class AdventureApp {
-
-	private static Scanner sc = new Scanner(System.in);
-	
-	public static void main(String[] args) {
-		Boolean hasGivenValidInput = false;
-		
 		while (!hasGivenValidInput) {
 			System.out.println("Enter the text stringexample: ");
 			String userString = sc.next();
@@ -201,12 +174,42 @@ public class AdventureApp {
 
 	public static void main(String[] args) {
 		Boolean hasGivenValidInput = false;
-		
+
+		while (!hasGivenValidInput) {
+			System.out.println("Enter the text stringexample: ");
+			String userString = sc.next();
+			if (userString .equalsIgnoreCase("stringexample")) {
+				System.out.println("It works!!");
+				hasGivenValidInput = true;
+			} else {
+				System.out.println("It didn't work.");
+			}
+		}
+	}
+
+} // END public class AdventureApp
+```
+
+---
+### `CHECKPOINT`
+
+```
+package com.mavenproject.adventure.adventure;
+
+import java.util.Scanner;
+
+public class AdventureApp {
+
+	private static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		Boolean hasGivenValidInput = false;
+
 		while(!hasGivenValidInput) {
-			
+
 			System.out.println("You find yourself in a brightly lit hallway.  There are doors to the NORTH and the SOUTH.");
 			String userString = sc.nextLine();
-			
+
 			if (userString.equalsIgnoreCase("south")) {
 				System.out.println("This room is under construction.  Your adventure is over.");
 				hasGivenValidInput = true;

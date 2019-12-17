@@ -11,7 +11,7 @@
 - `ctrl + space`
 
 ---
-### [WEEK 1 - `github`]()
-### [WEEK 1 - `delta`]()
+### [WEEK 1 ( `github` )](https://github.com/joedonline/REVATURE__workspace)
+### [WEEK 1 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01)
 
 ---
