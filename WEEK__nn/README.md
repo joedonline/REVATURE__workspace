@@ -4,7 +4,7 @@
 # WEEK nn
 
 ---
-### [WEEKDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/__00_WEEKDAY)
-### [WEEKDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/__00_WEEKDAY)
+### [WEEKDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__nn/__nn_WEEKDAY)
+### [WEEKDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__nn/__nn_WEEKDAY)
 
 ---
