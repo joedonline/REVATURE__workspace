@@ -8,7 +8,7 @@
 ## Java:
 - Object-Oriented
 - Pass by value
-- Strictly typed
+- Strictly typed, strongly typed
 - Verbose
 
 ---
@@ -64,8 +64,8 @@
 - Encapsulation: Access modifiers
   * `private` :: default :: `protected` :: `public`
 - Polymorphhism:
-  * Object Poly: Class `extends` SuperClass --> Class "is-a" SuperClass
-  * Methtod Poly: Class `implements` Interface --> Class "is-a" Interface
+  * **Object Polymorphism:** Class `extends` SuperClass --> Class "is-a" SuperClass
+  * **Methtod Polymorphism:** Class `implements` Interface --> Class "is-a" Interface
 - Abstraction: Interfaces, Abstract Classes, Abstract Methods
 
 ---
@@ -126,3 +126,62 @@ public class HelloWorld {
 
 }
 ```
+
+---
+## Data Types
+
+### Primitives (non-objects) vs. Literals
+| Primitives | Literals |
+|-|-|
+| `boolean` : `true` or `false`, *maybe* 1 bit | `true`, `false` |
+| `byte` : (signed) integral value, 1 byte or 8 bits, { -128, ..., +127 } | 3b |
+| `short` : (signed) integral value, 2 bytes | 3s |
+| `int` : (signed) integral value, 4 bytes | 3 |
+| `long` : (signed) integral value, 8 bytes | 3L |
+| `char` : (unsigned) integral value, 2 bytes | `B` |
+| `float` : (signed) decimal value, 4 bytes | 3.701f |
+| `double` : (signed) decimal value, 8 bytes | 3.701 |
+
+---
+#### signed --> + or -
+#### integral --> int --> 1, 2, 3, ...
+#### decimal --> 0.1, 1.765, ...
+
+---
+### Key takeaways for binary
+- Base 2 number system
+- 0's, 1's
+- `bit` ==> single `0` or `1`
+- byte ==> 8 bits
+- Numbers can *overflow* & wrap around
+
+---
+### Objects (also called *reference* types)
+- Instances of a class
+- All classes inherit from `java.lang.Object`
+  * **All objects are instances of `java.lang.Object` (via "is-a" rule)**
+- Objects occupy space in memory
+- Objects have *state* & *behavior*
+
+---
+## Memory in JVM
+
+### Heap
+- is where objects are stored
+
+![Heap in Java](heap_in_java.jpg)
+
+### Stack
+- is where ***method calls*** go
+- stores the __flow of execution__ of your program
+- Each method call goes on the Stack as a new **Stack Frame**
+- Stack frames store references to objects and *primitive values*
+
+| Stack |
+|-|
+|  |
+| `println` |
+| `repeatedPrint` |
+| `main()` |
+
+![Stack in Java](java_stack.jpg)
