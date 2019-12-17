@@ -1,7 +1,7 @@
 #### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace)  :house:
 #### :house_with_garden: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house_with_garden:
 ---
-# :calendar: WEEK 1
+# :calendar: [WEEK 01](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01)
 ## Tuesday, Dec. 17th 2019
 
 ---
@@ -38,7 +38,7 @@
 ## OOP: Object-Oriented Programming
 
 - A **programming paradigm** where objects are built from classes & have ***state*** & ***behavior***
-  
+
 #### 4 Pillars of OOP
 - ##### ABSTRACTION
   * Take away details
@@ -50,7 +50,7 @@
   * **Object Polymorphism**
     - The "`Is-a`" rule
     - "A Dog is an Animal"
-  * **Method Polymorphism** 
+  * **Method Polymorphism**
     - The same method name can have different functionality based on its class(overriding, runtime) or arguments(overloading, compile-time)
 - ##### INHERITANCE
   * Share **state** & **behavior** (lines of code) from Parent to Child
@@ -80,7 +80,7 @@
 
 ```
 public class HelloWorld {
-	
+
 	// static ==> associated with the Class, not instance
 	public static void main(String[] args) {
 		System.out.println("Hello World");
@@ -99,7 +99,7 @@ public class HelloWorld {
 
 ```
 public class HelloWorld {
-	
+
 	// static ==> associated with the Class, not instance
 	public static void main(String[] args) {
 		System.out.println("Hello World");
@@ -108,9 +108,9 @@ public class HelloWorld {
 	}
 
 	private static String myField = "J.Lo";
-	
+
 	//  Write a method that takes a String and an Integer
-	// and demonstrates Method Signatures, modifiers, 
+	// and demonstrates Method Signatures, modifiers,
 	// return types, method names
 
 	/*
@@ -191,7 +191,7 @@ public class HelloWorld {
 - __Every__ class has a Constructor
   * If we don't specify --> default Constructor
 - Every constructor begins with either:
-  * `super()` 
+  * `super()`
   * or `this()`
   * if not specified --> `super()` is used
 - The Constructor **instantiates** objects

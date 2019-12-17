@@ -1,7 +1,7 @@
 #### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace)  :house:
 #### :house_with_garden: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house_with_garden:
 ---
-# :calendar: WEEK 1
+# :calendar: [WEEK 01](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01)
 ## Monday, Dec. 16th 2019
 
 ---
