@@ -60,13 +60,13 @@
 
 ---
 ## Practical OOP in Java
-- Inheritance: Class `extends` other Class
-- Encapsulation: Access modifiers
-  * `private` :: default :: `protected` :: `public`
+- Abstraction: Interfaces, Abstract Classes, Abstract Methods
 - Polymorphhism:
   * **Object Polymorphism:** Class `extends` SuperClass --> Class "is-a" SuperClass
   * **Methtod Polymorphism:** Class `implements` Interface --> Class "is-a" Interface
-- Abstraction: Interfaces, Abstract Classes, Abstract Methods
+- Inheritance: Class `extends` other Class
+- Encapsulation: Access modifiers
+  * `private` :: default :: `protected` :: `public`
 
 ---
 ### Naming Conventions
