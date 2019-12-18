@@ -90,4 +90,11 @@
 - Model classes have private fields and public getter and setter methods.
 
 ---
-## 
+## Garbage Collection
+- Automatic memory management in Java
+- Deals exclusively with objects on the *heap*.
+- `GC` deallocates ("frees up") unused objects, so that their memory can be used elsewhere.
+- Objects are eligible for gabage collection once there are **no more references** point to them.
+- We can't make the garbage collector run.
+- We can only suggest it to run with `System.gc()`
+- The garbage collector should call `finalize()` on objects **but there are no guarantees**, so *don't use it!*.
