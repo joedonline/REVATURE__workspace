@@ -14,7 +14,8 @@
 
 ### Autoboxing
 - Java will convert primitives to wrappers automatically (and the reverse).
-- *** NOTE: *Java will not do __2(??)__ automatic conversions at once
+- *** NOTE: 
+  * Java will not do __2(??)__ automatic conversions at once
   * i.e.
    
     ``` 
