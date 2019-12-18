@@ -137,3 +137,6 @@
 - Checked Exceptions
   * are exceptions we can anticipate
   * because we know they are coming, the compiler will force you to **explicitly handle them**
+- Unchecked Exceptions
+  * Can't be reasonably anticipated, so the compiler will not force you to handle them
+  * You **can** still handle them if you want (it's a good idea to do so).
