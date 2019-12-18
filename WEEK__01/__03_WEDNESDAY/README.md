@@ -5,7 +5,14 @@
 ## Wednesday, Dec. 18th 2019
 
 ---
+#### OTHER REFERENCES / SOURCES
+- **[Java Memory Management, Lynda](#tbd)
+- [Checked vs. Unchecked](https://codeahoy.com/java/2016/04/02/checked-vs-unchecked-exceptions-in-java/)
+- [Java Heap Space vs. Stack](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
+
+---
 ## Wrapper Classes
+
 |||
 |-|-|
 | `int` | `Integer` |
@@ -104,6 +111,7 @@
 
 ---
 ## Exceptions
+- [REFERENCE](https://codeahoy.com/java/2016/04/02/checked-vs-unchecked-exceptions-in-java/)
 
 ### Four Different Things That Can AND Will Go Wrong
 - Compilation Errors: 
