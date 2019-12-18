@@ -7,6 +7,7 @@
 ---
 #### OTHER REFERENCES / SOURCES
 - **[Java Memory Management, Lynda](#tbd)
+- **[Java Programming Masterclass for Software Developers](#tbd)
 - [Checked vs. Unchecked](https://codeahoy.com/java/2016/04/02/checked-vs-unchecked-exceptions-in-java/)
 - [Java Heap Space vs. Stack](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 
