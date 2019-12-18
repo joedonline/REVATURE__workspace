@@ -1,5 +1,5 @@
-#### :house: [REVATURE workspce, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace)  :house:
-#### :house_with_garden: [REVATURE workspce, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house_with_garden:
+#### :house: [REVATURE workspace, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace)  :house:
+#### :house_with_garden: [REVATURE workspace, HOME (`delta`)](https://github.com/deltachannel/REVATURE__workspace) :house_with_garden:
 ---
 # WEEK 01
 
@@ -9,11 +9,11 @@
 
 ---
 #### [TUESDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01/__02_TUESDAY)
-#### [TUESDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01/__01_TUESDAY)
+#### [TUESDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01/__02_TUESDAY)
 
 ---
-#### [WEDNESDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01/__nn_WEEKDAY)
-#### [WEDNESDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01/__nn_WEDNESDAY)
+#### [WEDNESDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01/__03_WEDNESDAY)
+#### [WEDNESDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01/__03_WEDNESDAY)
 
 ---
 #### [WEEKDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01/__nn_WEEKDAY)
