@@ -227,3 +227,25 @@ java.nio.file.FileAlreadyExistsException: thisUriWillFail
 	at java.base/java.nio.file.Files.createDirectory(Files.java:693)
 	at com.revature.exceptionhandling.Driver.main(Driver.java:24)
 ```
+---
+## Project 0 - "Banking Project" ( [GH Link](https://github.com/1912december19java/project-0-joedonline) )
+- [Controllers Layer](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/controller)
+- [Exceptions Layer](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/exception)
+- [Models Layer](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/model)
+  * Put "Truck", "Car", "Account", "EndUser" etc. here
+- [Repository](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/repository)
+  * Rel. db
+- [Services Layer Layer](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/service)
+
+---
+## Basic (Practical) Git
+- `git clone <url>` 
+  * copies remote repo to local machine
+  * happens only once
+- `git pull`
+  * pulls down the newest/latest changes from remote repo
+- Done in sequence
+  * `git add .`
+  * `git status`, 
+  * `git commit -m "Some commit message."`
+  * `git push`
