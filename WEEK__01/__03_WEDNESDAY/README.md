@@ -79,12 +79,15 @@
 [](#linebreak)
 
 ### 4 Levels / Modifiers 
-|||
-|-|-|
-| `private` | only accessible inside `class` |
-| (default) | `private`, plus accessible inside package (sometimes called: `packageprivate`) |
-| `protected` | `packageprivate`, plus accessible inside subclasses |
-| `public` | accessible anywhere |
+| Level | Modifier | Scope |
+|-|-|-|
+| 1 | `private` | only accessible inside `class` |
+| 2 | (default) | `private`, plus accessible inside package (sometimes called: `packageprivate`) |
+| 3 | `protected` | `packageprivate`, plus accessible inside subclasses |
+| 4 | `public` | accessible anywhere |
 
 ### Typical Use
 - Model classes have private fields and public getter and setter methods.
+
+---
+## 
