@@ -98,3 +98,42 @@
 - We can't make the garbage collector run.
 - We can only suggest it to run with `System.gc()`
 - The garbage collector should call `finalize()` on objects **but there are no guarantees**, so *don't use it!*.
+- ([REFERENCE 1](https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/))
+- ([REFERENCE 2](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/garbage_collect.html))
+- ([REFERENCE 3](https://stackify.com/what-is-java-garbage-collection/))
+
+---
+## Exceptions
+
+### Four Different Things That Can AND Will Go Wrong
+- Compilation Errors: 
+  * We wrote bad Java code and it won't compile
+  * **Only happens when converting text to byte code**
+
+- Errors and Exceptions in Java (from the JVM)
+  * Things that the JVM `throws`
+  * **Only happens when trying to run byte code**
+  * There are **Three Categories**
+    - where each is a Class 
+      * ???(what are the classes?)
+
+  * `java.lang.Error`
+    - these are thrown by the JVM when something has gone wrong with the JVM
+    - Normally, these are not fixable
+    - Examples: `OutOfMemoryError`, `StackOverflowError`
+  
+  * `java.lang.Exception`
+    - these are *thrown* when a program is functioning "exceptionally badly" -- where something unexpected has occured
+    - ** often, but not always, these are fixable
+    - Example: `FileNotFoundException`
+    - ** Exceptions are subclassed from `java.lang.Exception` are **checked exceptions**
+  * `java.lang.RuntimeException`
+    - these are a subclass of `java.lang.Exception` and they serve a similar purpose
+    - however, they are **unchecked exceptions**
+    - Examples: `ArrayIndexOutOfBoundsException`, `ArithmeticException`
+
+### Checked vs. Unchecked Exceptions
+- [See Lynda videos](#tbd)
+- Checked Exceptions
+  * are exceptions we can anticipate
+  * because we know they are coming, the compiler will force you to **explicitly handle them**
