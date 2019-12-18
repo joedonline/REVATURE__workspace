@@ -14,7 +14,7 @@ public class Truck extends Vehicle {
 		this.towingPower = towingPower;
 	}
 	
-	/* methods */
+	/* methods */	
 	void tow() {
 		
 		if (this.towingPower > 1) {
@@ -23,13 +23,15 @@ public class Truck extends Vehicle {
 		
 	}
 	
-	void tow(Integer towingPower, Integer topSpeed) {
+	public void tow(Integer towingPower, Integer topSpeed) throws InsufficientTowingPowerException {
 		
 		if (this.towingPower > towingPower && this.topSpeed > topSpeed) {
 			System.out.println("Towing at " + towingPower);
 			this.towing = true;
 		} else {
-			System.out.println("Failed to tow.");
+			
+			// System.out.println("Failed to tow.");
+			
 			this.towing = false;
 		}
 		

@@ -149,3 +149,81 @@
 - Unchecked Exceptions
   * Can't be reasonably anticipated, so the compiler will not force you to handle them
   * You **can** still handle them if you want (it's a good idea to do so).
+
+---
+## Error/Exception Handling
+
+### Keywords:
+- `try` 
+  * is followed by a block `{}` of code that we want to enable Exception-handling for.
+- `catch(Exception e)`
+  * follows `try` block and specifies exception-handling for the Exception parameter
+  * Multiple `catch` blocks can follow a single `try`
+- `finally`
+  * this block always executes
+
+Sample Blocks
+
+```
+try {
+  // lines of code
+} catch (Exception e) {
+  // if something goes wrong
+} finally {
+  // executes in either case
+}
+```
+
+```
+try {
+
+  // lines of code
+
+} catch (Exception e) {
+  
+  // if something goes wrong
+
+} catch (FileNotFoundException e) {
+  
+  // optionally, another handler
+
+} finally {
+  
+  // executes in either case
+
+}
+```
+
+```
+try { ...stuff }
+finally { ...what to execute, pass or fail }
+```
+
+### Other Keywords:
+- `throw`
+  * this keyword, followed by an Exception, throws **that** Exception
+  * Example: `throw new Exception();`
+- `throws`
+  * used in a method signature
+  * specifies the Exceptions that may be thrown during the execution of that method
+  * Example:
+  
+    ```
+    public String readFromFile(Path p) throws FileNotFoundException, ArrayIndexOutOfBoundsException {
+
+      // ...lines of code here
+
+    }
+    ```
+
+#### Stack Trace Example
+
+```
+java.nio.file.FileAlreadyExistsException: thisUriWillFail
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:389)
+	at java.base/java.nio.file.Files.createDirectory(Files.java:693)
+	at com.revature.exceptionhandling.Driver.main(Driver.java:24)
+```

@@ -40,7 +40,7 @@ public class Vehicle {
 	/**
 	 *  methods 
 	 */
-	void drive() {
+	void drive() throws OutOfFuelException {
 		
 		if (this.fuel > 0 && this.running) {
 			System.out.println("Vroom.");
@@ -49,6 +49,10 @@ public class Vehicle {
 			System.out.println("Failed to drive");
 		}
 		
+	}
+	
+	public void refuel() {
+		System.out.println("Filling up tank.");
 	}
 	
 	void turnOn() {
