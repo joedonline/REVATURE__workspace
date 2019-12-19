@@ -103,5 +103,58 @@
   * `List<Vehicle>`
 
 ---
-## MAVEN
+## MAVEN (Apache Maven)
+- Build Automation and Dependency Management Tool
 - [mvnrepository.com](https://mvnrepository.com)
+
+### Build Automation
+- Maven build lifecycle:
+  * **validate:** makes sure Maven project is valid
+  * **compile:** compiles your code into `target/`
+  * **tests:** runs any tests in `src/test/java`
+  * **package:** produces a Java Archive( `*.jar` ) file to store app
+  * **verify:** checks, builds, package success
+  * **install:** installs this package to local Maven repository
+   - on Mac: `~/.m2`
+   - on Windows: `C:\Users\<username>\.m2`
+  * **deploy:** installs this package in central Maven repository.
+- Run these with `mvn <command>`
+  * Later stages will also run earlier stages.
+
+---
+## Dependency Management
+- So far, we've only used Java
+- When we use Java from other devs, we get their `.jar` files via Maven
+- All we need is to specify dependencies in the POM (pom.xml)
+- Maven first checks local repo, then automatically downloads dependencies, if necessary
+
+---
+## Unit Testing
+- Unit = Smallest functional unit, so the tiniest piece of code you can test that does something
+- In practice, **always always always unit test your methods**
+- Unit test by specifying what to pass into a method and what that method should return
+- When we run out tests, we actually run the methd with given input and check if the output is correct
+- Example:
+  
+  ```
+  int add(int x, int y);
+  "we expect add(3, 5) to return 8"
+
+  int output = add(3, 5);
+  assertTrue(output == 8);
+  ```
+
+??? **Integration Testing**
+- Tests multiple pieces of code
+
+---
+## JUnit
+- Unit testing framework for Java
+- Easy to use, widely used
+- Can also write integration tests
+- Annotate our tests with `@Test`
+- Specify set-up and tear-down activities using
+  * `@Before` (use more often)
+  * `@After` (use more often)
+  * `@BeforeClass` (faster but worse)
+  * `@AfterClass` (faster but worse)

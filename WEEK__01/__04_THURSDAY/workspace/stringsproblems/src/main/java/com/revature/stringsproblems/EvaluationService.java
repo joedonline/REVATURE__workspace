@@ -76,7 +76,7 @@ public class EvaluationService {
 		List<String> fourPt = Arrays.asList(new String[]{"F", "H", "V", "W", "Y"});
 		List<String> fivePt = Arrays.asList(new String[]{"K"});
 		List<String> eightPt = Arrays.asList(new String[]{"J", "X"});
-		//List<String> tenPt = Arrays.asList(new String[]{"Q", "Z"});
+		List<String> tenPt = Arrays.asList(new String[]{"Q", "Z"});
 
 		int points = 0;
 
@@ -169,8 +169,8 @@ public class EvaluationService {
 	public static int cheekyStringLength(String str) {
 
 		int length = 0;
-		
-		for (int i = 0; i < str.trim().split("").length; i++) {
+
+		for (String c : str.trim().split("")) {
 			length += 1;
 		}
 
