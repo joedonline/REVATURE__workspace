@@ -135,7 +135,8 @@
 - ([REFERENCE 3](https://stackify.com/what-is-java-garbage-collection/))
 
 ---
-## Exceptions
+## Exceptions 
+- [Oracle Docs Link](https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html)
 - [REFERENCE](https://codeahoy.com/java/2016/04/02/checked-vs-unchecked-exceptions-in-java/)
 
 ### Four Different Things That Can AND Will Go Wrong
@@ -167,6 +168,8 @@
 
 ### Checked vs. Unchecked Exceptions
 - [Lynda video](https://www.lynda.com/Java-tutorials/Checked-vs-unchecked-exceptions/679628/704614-4.html)
+  * Any Exception Class that has `RuntimeException` in its heirarchy is an **unchecked exception**.
+  * Example: [ArrayOutOfBoundsException](https://docs.oracle.com/javase/7/docs/api/java/lang/ArrayIndexOutOfBoundsException.html)
 - Checked Exceptions
   * are exceptions we can anticipate
   * because we know they are coming, the compiler will force you to **explicitly handle them**
