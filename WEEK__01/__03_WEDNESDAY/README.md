@@ -23,7 +23,7 @@
 ### Autoboxing
 - Java will convert primitives to wrappers automatically (and the reverse).
 - *** NOTE: 
-  * Java will not do __2(??)__ automatic conversions at once
+  * Java will __not__ do 2 automatic conversions at once
   * i.e.
    
     ``` 
@@ -47,20 +47,44 @@
   * `&` (and), `|` (or), `!` (not)
   * Short Circuit Operators --> `&&`, `||`
   
-  #### ???
     ```
-    int i = 5i // i = 6
+    int i = 5i
+    // What is i? 
+    // ans: i = 5
 
     boolean b = (i++ > 7 && i++ > 8)i 
-    // i = 6, b = false
+    // Given: i = 6
+
+    What is b?
+    // ans: b = false
+
+    ---
 
     boolean b = (i++ > 6 && i++ > 7)i 
-    // i = 5, b = false
-
-    // What is i?
+    // Given: i = 5
 
     // What is b?
+    // ans: b = false
+
+    boolean b = (++i == 1 && i++ > 0)
+    // Given: i = 0
+
+    // What is b?
+    // ans: b = true
     ```
+
+    ### Deep dive...
+
+    `Given: i = 6 | b = (i++ > 7 && i++ > 8)i`
+
+    `// What is i?`
+    
+    | index | `boolean b` | `=` | `i++ > 7` | `&&` | `i++ > 8` |
+    |-|-|-|-|-|-|
+    | 0 | `false` | = | `[i = 6] > 7 :: false` | `&&` | n/a |
+    | 1 | `false` | = | `[i = 7] > 7 :: false` | `&&` | n/a |
+    | 2 | `false` | = | `[i = 7] > 7 :: false` | `&&` | n/a |
+    | 3 | `true` | = | `[i = 8] > 7 :: true` | `&&` | n/a |
 
   * Ternary (shortened `if-else`)
     ```
