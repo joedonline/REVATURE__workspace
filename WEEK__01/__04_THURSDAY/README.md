@@ -101,3 +101,7 @@
   * `List<String>`
   * `List<Object>`
   * `List<Vehicle>`
+
+---
+## MAVEN
+- [mvnrepository.com](https://mvnrepository.com)

@@ -169,8 +169,8 @@ public class EvaluationService {
 	public static int cheekyStringLength(String str) {
 
 		int length = 0;
-
-		for (String c : str.trim().split("")) {
+		
+		for (int i = 0; i < str.trim().split("").length; i++) {
 			length += 1;
 		}
 
