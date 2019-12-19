@@ -5,4 +5,19 @@
 ## Thursday, Dec. 19th 2019
 
 ---
-# TITLE
+## Strings
+- are Objects
+- are **immutable**.
+- The String class **cannot** be subclassed (it is final).
+- Inside each `String` is an `array` or chars.
+- Strings are stored in the **String pool**.
+- Each specific `String` value only appears in the Pool once.
+  * This is so that String instances can be reused & save memory.
+  
+  ![String Constant Pool](string_constant_pool.png)
+
+  ![Java String Pool](java_string_pool.png)
+
+  ![Java Stack Heap StringPool](Java_Stack_Heap_StringPool.jpg)
+
+
