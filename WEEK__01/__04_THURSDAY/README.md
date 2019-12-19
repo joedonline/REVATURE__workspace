@@ -212,4 +212,6 @@
 
   Vehicle v2 = new Vehicle();
   Car c2 = (Car) v2; // ClassCastException
+
+  Integer i2 = (Integer) v2; // CompilationError
   ```
