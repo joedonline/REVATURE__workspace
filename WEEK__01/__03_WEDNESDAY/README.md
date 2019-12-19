@@ -73,7 +73,7 @@
     // ans: b = true
     ```
 
-    ### Deep dive...
+    #### Deep dive...
 
     `Given: i = 6 | b = (i++ > 7 && i++ > 8)i`
 
@@ -259,7 +259,7 @@ java.nio.file.FileAlreadyExistsException: thisUriWillFail
   * Put "Truck", "Car", "Account", "EndUser" etc. here
 - [Repository](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/repository)
   * Rel. db
-- [Services Layer Layer](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/service)
+- [Services Layer](https://github.com/1912december19java/project-0-joedonline/tree/master/src/main/java/com/revature/service)
 
 ---
 ## Basic (Practical) Git
