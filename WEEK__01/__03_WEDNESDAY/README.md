@@ -83,8 +83,8 @@
     |-|-|-|-|-|-|
     | `0` | `false` | = | `[i = 6] > 7 :: false` | `&&` | n/a |
     | `1` | `false` | = | `[i = 7] > 7 :: false` | `&&` | n/a |
-    | `2` | `false` | = | `[i = 7] > 7 :: false` | `&&` | n/a |
-    | `3` | `true` | = | `[i = 8] > 7 :: true` | `&&` | n/a |
+    | `2` | `false` | = | `[i = 8] > 7 :: true` | `&&` | n/a |
+    | `3` | `true` | = | `[i = 9] > 7 :: true` | `&&` | n/a |
 
   * Ternary (shortened `if-else`)
     ```
