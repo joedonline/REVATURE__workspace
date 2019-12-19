@@ -178,3 +178,38 @@
 - `LinkedHashSet`
 - `Vector`
 - `Stack`
+
+---
+## Casting
+- Casting in Java is done using `(<type>)`
+- We can cast with either reference or primitive types
+- Casting is used to change the type of an existing reference or primitive
+- Example:
+
+  ```
+  int i = 3;
+  long el = (long) i; // works w/o cast
+
+  long el = 3L;
+  int i = (int) el; // requires the cast
+  ```
+
+### Casting references
+- The type of a reference need not exactly match the type of the object it points to
+- The rules:
+  
+  | Heap | points to | Stack Frame |
+  |-|:-:|-|
+  | Car | <-- | Vehicle v1 |
+  | Vehicle |  <-- | Vehicle v2 |
+  | Vehicle | <-- | Car c1 |
+
+- Example:
+
+  ```
+  Vehicle v1 = new Car();
+  Car c1 = (Car) v1; // will work
+
+  Vehicle v2 = new Vehicle();
+  Car c2 = (Car) v2; // ClassCastException
+  ```
