@@ -164,3 +164,17 @@
 - Unit tests need to test the smallest functional pieces
 - We create "mock" versions of classes/methods with fixed return values
 - This lets us test just one method
+
+---
+## Concrete Collections
+- `ArrayList`
+- `LinkedList`
+- `HashSet`
+- `TreeSet`
+- `PriorityQueue`
+- `HashMap`
+- `TreeMap`
+- `ArrayDeque`
+- `LinkedHashSet`
+- `Vector`
+- `Stack`
