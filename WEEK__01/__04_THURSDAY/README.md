@@ -88,3 +88,16 @@
 |  | In sum, they are very similar to a class |
 
 ??? ** NOTE: Non-abstract classes **cannot** have abstract methods
+
+---
+## Generics
+- Parameterizes over Types
+- Allows you to use different classes, each version of the class working with a different type
+- Compile-time type safety
+- Syntax: 
+  * `List<E>`, where `E` = `Type` or `Object`
+- Examples:
+  * `List<Integer>`
+  * `List<String>`
+  * `List<Object>`
+  * `List<Vehicle>`
