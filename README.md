@@ -9,6 +9,7 @@
 ---
 ### Java (Spring Tool Suite) Keyboard Shortcuts
 - `ctrl + space`
+- auto-format --> `ctrl + shift + F` 
 
 ---
 ### GitHub Classroom

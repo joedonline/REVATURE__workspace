@@ -158,3 +158,9 @@
   * `@After` (use more often)
   * `@BeforeClass` (faster but worse)
   * `@AfterClass` (faster but worse)
+
+---
+## Mocking
+- Unit tests need to test the smallest functional pieces
+- We create "mock" versions of classes/methods with fixed return values
+- This lets us test just one method

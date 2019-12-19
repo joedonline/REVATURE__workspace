@@ -41,7 +41,7 @@ public class EvaluationService {
 		}
 
 		// Build firstChars to acronym
-		System.out.println(acronym);
+		// System.out.println(acronym);
 		return acronym;
 	}
 
