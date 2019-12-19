@@ -44,8 +44,8 @@
     - *** NOTE: **`==`** --> *compares the references*
 
 - Logical:
-  * `&` (and), `|` (or), `!` (not)
-  * Short Circuit Operators --> `&&`, `||`
+  * ### `&` (and), `|` (or), `!` (not)
+  * ### Short Circuit Operators --> `&&`, `||`
   
     ```
     int i = 5i
@@ -86,7 +86,7 @@
     | `2` | `true` | = | `[i = 8] > 7 --> true` | `&&` | `[i = 9] > 8 --> true` |
     | `3` | `true` | = | `[i = 9] > 7 --> true` | `&&` | `[i = 10] > 8 --> true` |
 
-  * Ternary (shortened `if-else`)
+  * ### Ternary (shortened `if-else`)
     ```
     <boolean expression> ? return if `true` : return if `false`
     ```
