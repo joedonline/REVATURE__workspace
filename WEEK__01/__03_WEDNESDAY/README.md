@@ -6,8 +6,8 @@
 
 ---
 #### OTHER REFERENCES / SOURCES
-- **[Java Memory Management, Lynda](#tbd)
-- **[Java Programming Masterclass for Software Developers](#tbd)
+- **[Java Memory Management, Lynda](https://www.lynda.com/Java-tutorials/Java-Memory-Management/802862-2.html)
+- **[Java Programming Masterclass for Software Developers](https://www.udemy.com/course/java-the-complete-java-developer-course/)
 - [Checked vs. Unchecked](https://codeahoy.com/java/2016/04/02/checked-vs-unchecked-exceptions-in-java/)
 - [Java Heap Space vs. Stack](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 
@@ -166,7 +166,7 @@
     - Examples: `ArrayIndexOutOfBoundsException`, `ArithmeticException`
 
 ### Checked vs. Unchecked Exceptions
-- [See Lynda videos](#tbd)
+- [Lynda video](https://www.lynda.com/Java-tutorials/Checked-vs-unchecked-exceptions/679628/704614-4.html)
 - Checked Exceptions
   * are exceptions we can anticipate
   * because we know they are coming, the compiler will force you to **explicitly handle them**
