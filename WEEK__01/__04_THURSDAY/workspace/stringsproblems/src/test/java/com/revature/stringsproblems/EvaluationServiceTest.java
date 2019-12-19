@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 // import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class EvaluationServiceTest {
@@ -26,6 +28,21 @@ public class EvaluationServiceTest {
 	public void scrabbleScoreTalliesCabbage() {
 		int output = EvaluationService.getScrabbleScore("Cabbage");
 		assertEquals(output, 14);
+	}
+	
+	@Test(expected = UnsupportedOperationException.class)
+	public void breakingStringThrowsException() {
+		int output = evaluationService.cheekyStringLength("breakingstring");
+	}
+	
+	@Before
+	public void setUp() {
+		evaluationService = new EvaluationService();
+	}
+	
+	@After
+	public void tearDown() {
+		evaluationService = null;
 	}
 	
 }
