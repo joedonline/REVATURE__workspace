@@ -4,11 +4,15 @@ import static org.junit.Assert.assertEquals;
 // import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class EvaluationServiceTest {
+	
+	ArrayList<String> myArrayList = new ArrayList<String>();
 	
 	private static EvaluationService evaluationService;
 	

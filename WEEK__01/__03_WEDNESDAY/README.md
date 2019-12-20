@@ -266,6 +266,7 @@ java.nio.file.FileAlreadyExistsException: thisUriWillFail
 
 ---
 ## Basic (Practical) Git
+- **Source Control Management**
 - `git clone <url>` 
   * copies remote repo to local machine
   * happens only once
