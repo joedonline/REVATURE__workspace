@@ -166,6 +166,8 @@ public class HelloWorld {
 ---
 ## Memory in JVM
 
+  ![Stack Heap, sharing data](Stack_Heap_diagram__sharingdata.png)
+
 ### Heap
 - is where objects are stored
 
