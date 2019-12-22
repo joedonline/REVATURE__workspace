@@ -155,8 +155,8 @@
 - Can also write integration tests
 - Annotate our tests with `@Test`
 - Specify set-up and tear-down activities using
-  * `@Before` (used more often)
-  * `@After` (used more often)
+  * `@Before` (use this more often)
+  * `@After` (use this more often)
   * `@BeforeClass` (faster but worse)
   * `@AfterClass` (faster but worse)
 
