@@ -90,8 +90,6 @@
 | methods can be implemented using the default modifier | Has (and **always** needs) a Constructor |
 |  | In sum, they are very similar to a class |
 
-??? ** NOTE: Non-abstract classes **cannot** have abstract methods
-
 ---
 ## Generics
 - Parameterizes over Types
