@@ -217,9 +217,10 @@
   Integer i2 = (Integer) v2; // CompilationError
   ```
 
-  ??? **Downcasting**, **Upcasting**
-  - ([Reference 1 - University of Texas](https://www.cs.utexas.edu/~cannata/cs345/Class%20Notes/14%20Java%20Upcasting%20Downcasting.htm))
-  - ([Reference 2 - Edureka](https://www.edureka.co/blog/upcasting-and-downcasting-in-java/))
+  **Downcasting**, **Upcasting**
+  - ([Reference 1](https://www.edureka.co/blog/upcasting-and-downcasting-in-java/#what))
+  - ([Reference 2 - University of Texas](https://www.cs.utexas.edu/~cannata/cs345/Class%20Notes/14%20Java%20Upcasting%20Downcasting.htm))
+  - ([Reference 3 - Edureka](https://www.edureka.co/blog/upcasting-and-downcasting-in-java/))
   - RULES:
     1. Must be in the same heirarchy (subclass or superclass)
     2. The Object on the Heap must actually be the type of reference ("is-a")
