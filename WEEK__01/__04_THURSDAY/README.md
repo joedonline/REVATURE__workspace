@@ -116,8 +116,8 @@
   * **package:** produces a Java Archive( `*.jar` ) file to store app
   * **verify:** checks, builds, package success
   * **install:** installs this package to local Maven repository
-   - on Mac: `~/.m2`
-   - on Windows: `C:\Users\<username>\.m2`
+    - on Mac: `~/.m2`
+    - on Windows: `C:\Users\<username>\.m2`
   * **deploy:** installs this package in central Maven repository.
 - Run these with `mvn <command>`
   * Later stages will also run earlier stages.
