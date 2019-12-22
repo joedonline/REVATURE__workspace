@@ -134,7 +134,7 @@
 - Unit = Smallest functional unit, so the tiniest piece of code you can test that does something
 - In practice, **always always always unit test your methods**
 - Unit test by specifying what to pass into a method and what that method should return
-- When we run out tests, we actually run the methd with given input and check if the output is correct
+- When we run out tests, we actually run the method with given input and check if the output is correct
 - Example:
   
   ```
