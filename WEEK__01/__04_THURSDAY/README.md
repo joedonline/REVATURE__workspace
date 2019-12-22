@@ -65,7 +65,8 @@
 - A typical hierarchy includes both
 - `I extends I`, `C implements I`, `C extends C`
 
-**??? LOOKUP: Collections API**
+### The Collections API
+
 - Collections API: { `Set`, `List`, `Map` } = interfaces
   * Set, List, Map --> all cannot be instantiated!
 - Abstract classes with partial implementations
@@ -75,6 +76,8 @@
   * `ArrayList`
   * `LinkedList`
   * `HashSet`
+
+![The Java Collection Heirarchy](Java-Collection-Hierarchy.png)
 
 ---
 ## Interfaces vs. Abstract Classes
