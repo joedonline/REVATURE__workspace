@@ -9,7 +9,7 @@
 - are Objects
 - are **immutable**.
 - The String class **cannot** be subclassed (it is final).
-- Inside each `String` is an `array` or chars.
+- Inside each `String` is an `array` of chars.
 - Strings are stored in the **String pool**.
 - Each specific `String` value only appears in the Pool once.
   * This is so that String instances can be reused & save memory.
