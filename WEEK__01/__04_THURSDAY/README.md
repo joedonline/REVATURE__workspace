@@ -126,7 +126,7 @@
 ## Dependency Management
 - So far, we've only used Java
 - When we use Java from other devs, we get their `.jar` files via Maven
-- All we need is to specify dependencies in the POM (pom.xml)
+- All we need to do is specify the dependencies in the POM (pom.xml)
 - Maven first checks local repo, then automatically downloads dependencies, if necessary
 
 ---
