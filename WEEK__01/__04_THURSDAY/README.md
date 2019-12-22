@@ -71,7 +71,7 @@
   * Set, List, Map --> all cannot be instantiated!
 - Abstract classes with partial implementations
   * `AbstractList`
-  * `Abstract Set`
+  * `AbstractSet`
 - Concrete classes
   * `ArrayList`
   * `LinkedList`
