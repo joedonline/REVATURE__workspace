@@ -75,6 +75,7 @@
 ---
 ## `Object.hashCode()`
 - `HashMap`
+- How Hashing Works in Java ( [REFERENCE](https://www.youtube.com/watch?v=mFY0J5W8Udk) )
 
 ---
 ### `iterator()`
