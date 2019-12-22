@@ -9,7 +9,7 @@
 ---
 ### Java (Spring Tool Suite) Keyboard Shortcuts
 - `ctrl + space`
-- auto-format --> `ctrl + shift + F` 
+- auto-format --> `ctrl + shift + F`
 
 ---
 ### GitHub Classroom
@@ -18,6 +18,10 @@
 ---
 ### [WEEK 01 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01)
 ### [WEEK 01 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01)
+
+---
+### [WEEK 02 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__02)
+### [WEEK 02 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__02)
 
 ---
 ### [WEEK nn ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__nn)
