@@ -143,6 +143,10 @@ public class HelloWorld {
 | `double` : (signed) decimal value, 8 bytes | 3.701 |
 
 ---
+
+ ![Primitives](lynda_ref_primitives.png)
+
+---
 #### signed --> + or -
 #### integral --> int --> 1, 2, 3, ...
 #### decimal --> 0.1, 1.765, ...
