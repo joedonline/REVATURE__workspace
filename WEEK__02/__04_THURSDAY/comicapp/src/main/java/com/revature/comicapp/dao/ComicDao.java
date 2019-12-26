@@ -1,6 +1,7 @@
 package com.revature.comicapp.dao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import com.revature.comicapp.models.Comic;
 
@@ -25,5 +26,11 @@ public interface ComicDao {
 	 * @param comic
 	 */
 	void update(Comic comic);
+	
+	List<Comic> getAll();
+	
+	List<Comic> getByPriceRange();
+
+	List<Comic> getByPriceRange(double upper, double lower);
 	
 }

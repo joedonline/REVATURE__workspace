@@ -12,6 +12,7 @@ public class Driver {
 		ComicDao comicDao = new ComicDaoPostgres();
 		
 		System.out.println(comicDao.get(1));
+		System.out.println(comicDao.getByPriceRange(3.0, 100.0));
 
 	}
 
