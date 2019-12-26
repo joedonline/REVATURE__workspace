@@ -11,6 +11,17 @@ public class Comic {
 		return id;
 	}
 	
+	public Comic(int id, String title, int pageCount, double price, int rating) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.pageCount = pageCount;
+		this.price = price;
+		this.rating = rating;
+	}
+
+
+
 	public void setId(int id) {
 		this.id = id;
 	}

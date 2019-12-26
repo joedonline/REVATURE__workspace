@@ -117,3 +117,20 @@
 ## DAO: Data Access Object (design pattern)
 - a single object responsible for getting data from outside the app.
 - big picture -- ??? lookup "The Flying Buttress"
+
+---
+## JDBC: Java DataBase Connectivity
+- Uniform interface, implementations differ based on drivers/vendors
+<br><br>
+
+### Central Interfaces:
+- **Connection** 
+  * represents a connection to a DB. A "session".
+- **Statement**
+  * represents a SQL statement
+  * used for querying DB and retrieve `ResultSets`
+- **ResultSets**
+  * represents the 'results' retrieved from DB
+- **PreparedStatement**
+  * a statement which only allows values to be filled. ***Prevents SQL Injection***
+  * Compiled in Java rather than by DB
