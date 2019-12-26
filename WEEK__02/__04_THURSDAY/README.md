@@ -67,3 +67,13 @@
 - We'll be learning Postgres/PostgreSQL
 - Other vendors: Oracle, MySQL, Server SQL, MariaDB, ...
 - There are also many NoSQL database
+<br><br>
+
+### SQL Statements: Control Keywords / Commands
+- [Study Guide - Link](https://sites.google.com/revature.com/studyguide/databasesql#h.p_O_Df70ohDyTa)
+- **DML** --> `INSERT`, `DELETE`, `UPDATE`, `SELECT`
+- **DDL** --> `CREATE`, `ALTER`, `DROP`
+  * Also `TRUNCATE` (in Oracle, not in Postgres) *not used often but interesting to know*
+- **DCL** --> `GRANT`, `REVOKE`
+- **TCL** --> `BEGIN`, `SAVEPOINT`, `COMMIT`, `ROLLBACK`
+<br><br>
