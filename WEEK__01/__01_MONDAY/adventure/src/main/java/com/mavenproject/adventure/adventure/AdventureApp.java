@@ -1,6 +1,11 @@
 package com.mavenproject.adventure.adventure;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
+
+import com.mavenproject.adventure.controllers.RoomController;
 
 public class AdventureApp {
 
@@ -9,27 +14,34 @@ public class AdventureApp {
 	public static void main(String[] args) {
 		Boolean hasGivenValidInput = false;
 		
+		String roomOnePrompt = "You find yourself in the laboratory.";
+		String roomTwoPrompt = "You find yourself in the library.";
+		
+		Set<String> roomOneOptions = new HashSet<String>(Arrays.asList(
+				"NORTH",
+				"SOUTH"
+				));
+		
+		Set<String> roomTwoOptions = new HashSet<String>(Arrays.asList(
+				"SOUTH"
+				));
+		
+		Room roomOne = new Room(roomOneOptions, roomOnePrompt);
+		Room roomTwo = new Room(roomTwoOptions, roomTwoPrompt);
+		
 		while(!hasGivenValidInput) {
 			
-			System.out.println("You find yourself in a brightly lit hallway.  There are doors to the NORTH and the SOUTH.");
-			String userString = sc.nextLine();
+			System.out.println(roomOne.getPrompt());
+			System.out.println("Options: " + roomOne.getOptions());
 			
-			if (userString.equalsIgnoreCase("south")) {
-				System.out.println("This room is under construction.  Your adventure is over.");
-				hasGivenValidInput = true;
-			} else if (userString.equalsIgnoreCase("north")) {
-				System.out.println("This room is full of spiders." +
-						"Do you want to leave the adventure?");
-				String leaveAdventureConfirmation = sc.nextLine();
-				while(!leaveAdventureConfirmation.equalsIgnoreCase("yes")) {
-					System.out.println("There are really a lot of spiders, are you sure?");
-					leaveAdventureConfirmation = sc.nextLine();
-				}
-				hasGivenValidInput = true;
-			} else {
-				System.out.println("Invalid input");
-			}
+			String userInput = sc.nextLine();
+			
 		}
+		
+		RoomController roomComtroller = new RoomController();
+		roomComtroller.setRoom(roomOne);
+		roomComtroller.enter();
+		System.out.println(RoomController.acceptOptionFromUser());
 	}
 
 } // END public class AdventureApp
