@@ -85,4 +85,35 @@
 <br><br>
 
 ---
-## 
+## `SELECT` Clauses
+
+| Keyword | Clauses | Description
+|-|-|-|
+| `SELECT` | `<columns or *>` | Pick with columns to get |
+| `FROM` | `<table>` | Pick table to get records from. Can specify database and schema: `database.schema.table` |
+| `WHERE` | `<condition>` | filters records based on a condition: i.e. `height >= 3` |
+| `GROUP BY` | `<column or expression>` | Separates records into groups and aggregates within group |
+| `HAVING` | `<condition>` | Filters groups based on a condition: i.e. `pop >= 100,000` |
+| `ORDER BY` | `<column or expression>` | Orders results |
+
+---
+### Database Practice
+
+## Comic
+
+| id | title | author_id | genre_id | page_count | cost | rating |
+|-|-|-|-|-|-|-|
+|  |||||||
+
+---
+## PostgreSQL Documentation
+- [Docs Link](https://postgresql.org/docs)
+
+---
+## SQL Tools
+- [SQLBolt](#tbd)
+
+--- 
+## DAO: Data Access Object (design pattern)
+- a single object responsible for getting data from outside the app.
+- big picture -- ??? lookup "The Flying Buttress"
