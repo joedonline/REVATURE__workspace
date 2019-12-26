@@ -71,9 +71,18 @@
 
 ### SQL Statements: Control Keywords / Commands
 - [Study Guide - Link](https://sites.google.com/revature.com/studyguide/databasesql#h.p_O_Df70ohDyTa)
-- **DML** --> `INSERT`, `DELETE`, `UPDATE`, `SELECT`
+- **DML** --> `INSERT`, `DELETE`, `UPDATE`
+  * (and depending on the case) `SELECT`
 - **DDL** --> `CREATE`, `ALTER`, `DROP`
   * Also `TRUNCATE` (in Oracle, not in Postgres) *not used often but interesting to know*
 - **DCL** --> `GRANT`, `REVOKE`
 - **TCL** --> `BEGIN`, `SAVEPOINT`, `COMMIT`, `ROLLBACK`
+- **DCL** in/and/or **DQL** --> `SELECT`
 <br><br>
+
+### SQL Tool
+- [DBeaver](https://dbeaver.io/download) ??? DOWNLOAD AND INSTALL !!!!
+<br><br>
+
+---
+## 
