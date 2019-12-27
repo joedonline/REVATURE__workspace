@@ -354,6 +354,9 @@ Cars ON <join condition>
 <br><br>
 
 ---
+### `ALTER TABLE` ????
+
+---
 ### PRACTICAL EXERCISE: Interactive SQL
 - [SQLBolt - REFERENCE](https://sqlbolt.com/)
 <br><br>
