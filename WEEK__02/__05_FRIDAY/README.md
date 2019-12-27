@@ -159,6 +159,95 @@
 <br><br>
 
 ---
+## Joins
+- Joins combine records from 2+ tables.
+- The result of a Join will have columns from all involved tables.
+
+<br><br>
+
+### To specify a Join:
+- We need a **Join condition** and the **Join type**.
+- There may/will be multiple ways to achieve the same result
+
+<br><br>
+
+### Join Condition
+- Boolean expression (`true` or `false`)
+- Typically makes use of information from one record in `Table A` and one in `Table B`
+- When the Join Condition is `true`, the two records are combined and included in the output
+
+<br><br>
+
+### Join Types
+- **`INNER`:** Do nothing else, only the join condition matters.
+- **`LEFT OUTER`:** Add one record to the output for each record in the `LEFT` table that doesn't yet appear in the output.
+
+  <br><br>
+
+  ![Join](join_tables.png)
+
+  <br><br>
+
+**Widgets**
+| widget_id | widget_size | car_id |
+|-|-|-|
+| 100 | 20 | 2 |
+| 200 | 20 | 1 |
+| 300 | 40 | 3 |
+
+<br>
+
+**Cars**
+| car_id | model |
+|-|-|
+| 1 | Jetta |
+| 2 | Prius |
+| 3 | F150 |
+
+<br>
+
+| condition | type |
+|-|-|
+| `widgets.car_id = cars.car_id` | `INNER` |
+| `widget_size <= 20` | `INNER` |
+
+<br>
+
+### Output of above `JOIN`
+
+`INNER` @ `widgets.car_id = cars.car_id`
+
+| widget_id | widget_size | widgets.car_id | cars.car_id | model |
+|-|-|-|-|-|
+| 100 | 20 | 2 | 2 | Prius |
+| 200 | 20 | 1 | 1 | Jetta |
+| 300 | 40 | 3 | 3 | F150 |
+
+<br><br>
+
+`INNER` @ `widget_size <= 20`
+
+| widget_id | widget_size | widgets.car_id | cars.car_id | model |
+|-|-|-|-|-|
+| 100 | 20 | 2 | 1 | Jetta |
+| 100 | 20 | 2 | 2 | Prius |
+| 100 | 20 | 2 | 3 | F150 |
+| 200 | 20 | 1 | 1 | Jetta |
+| 200 | 20 | 1 | 2 | Prius |
+| 200 | 20 | 1 | 3 | F150 |
+
+<br><br>
+
+### INNER JOIN Syntax
+
+```
+Widgets INNER JOIN
+Cars ON <join condition>
+```
+
+<br><br>
+
+---
 ### PRACTICAL EXERCISE: Interactive SQL
 - [SQLBolt - REFERENCE](https://sqlbolt.com/)
 <br><br>
