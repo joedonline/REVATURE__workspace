@@ -22,6 +22,7 @@
   |-|-|
   | Gone With The Wind | Vivian Leigh |
   | Waterloo Bridge | Vivian Leigh |
+  
   <br><br>
 
 - **Deletion anomaly:** a piece of data cannot be deleted without also deleting other data.
@@ -31,6 +32,8 @@
   | ~~Gone With The Wind~~ | ~~Vivian Leigh~~ | ~~6~~ |
   | ~~Waterloo Bridge~~ | ~~Vivian Leigh~~ | ~~6~~ |
   | Gladiator | Russell Crowe | 7 |
+
+
   <br><br>
 
 - **Creation anomaly:** a piece of data cannot be added without also providing other (potentially `NULL`) data
@@ -41,6 +44,7 @@
   | ~~Waterloo Bridge~~ | ~~Vivian Leigh~~ | ~~6~~ |
   | Gladiator | Russell Crowe | 7 |
   | Forrest Gump | Tom Hanks | `NULL` |
+
   <br><br>
 
 ### Functional Dependence:
@@ -122,6 +126,7 @@
   | 2 | Springfield | IL | Yes | 500 |
   | 3 | Louisville | KY | Yes | 300 |
   | 4 | NYC | NY | No | 199 |
+
   <br><br>
 
   **Non-3rd Form** ???
