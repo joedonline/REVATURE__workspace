@@ -96,6 +96,7 @@
 
 
 #### 1st Normal Form
+- [Memory Marker] "The key"
 - Each record must be unique
 - There must be a Candidate Key
 - **Values must be atomic**
@@ -104,6 +105,7 @@
   <br><br>
 
 #### 2nd Normal Form
+- [Memory Marker] "The whole key"
 - All non-Candidate-key columns must depend on the **entirety** of every candidate key.
 - If there are no composite keys:
   
@@ -111,6 +113,7 @@
 <br><br>
 
 #### 3rd Normal Form
+- [Memory Marker] "..and nothing but the key"
 - No non-Candidate-key column depends on any other non-Candidate-key column
 
   | `CityId` | `City` | `State` | `Over200Target` | `Sales` |
@@ -121,6 +124,7 @@
   | 4 | NYC | NY | No | 199 |
   <br><br>
 
+  **Non-3rd Form** ???
   | id | title | mediatype | price |
   |-|-|-|-|
   | 1 | Mulan OST | Casette | 0.50 |
@@ -129,6 +133,11 @@
   | 4 | GWTW | DVD | 2.00 |
   <br><br>
 
+### Foreign Key
+- A reference to the Primary Key of another table, used to link records together in a `JOIN`
+  <br><br>
+
+---
 ### EXAMPLES
 
 | `City Id` | `City` | `State` | `Region` | `Sales` |
