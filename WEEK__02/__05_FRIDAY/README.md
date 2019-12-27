@@ -179,10 +179,14 @@
 <br><br>
 
 ### Join Types
-- **`INNER`:** Do nothing else, only the join condition matters.
-- **`LEFT OUTER`:** Add one record to the output for each record in the `LEFT` table that doesn't yet appear in the output.
-
-  <br><br>
+- **`INNER`** 
+  * Do nothing else, only the join condition matters. <br><br>
+- **`LEFT OUTER`** 
+  * Add one record to the output for each record in the `LEFT` table that doesn't yet appear in the output. <br><br>
+- **`RIGHT OUTER`**
+  * Replace `LEFT` with `RIGHT` above <br><br>
+- **`FULL OUTER`**
+  * Both a `RIGHT` and `LEFT OUTER JOIN` <br><br>
 
   ![Join](join_tables.png)
 
@@ -210,6 +214,9 @@
 |-|-|
 | `widgets.car_id = cars.car_id` | `INNER` |
 | `widget_size <= 20` | `INNER` |
+| `widget_size <= 20` | `LEFT OUTER` |
+| `widget_size <= 20` | `RIGHT OUTER` |
+| `(2 + 3) > 6` | `RIGHT OUTER` |
 
 <br>
 
@@ -235,6 +242,45 @@
 | 200 | 20 | 1 | 1 | Jetta |
 | 200 | 20 | 1 | 2 | Prius |
 | 200 | 20 | 1 | 3 | F150 |
+
+<br><br>
+
+`LEFT OUTER` @ `widget_size <= 20`
+
+| widget_id | widget_size | widgets.car_id | cars.car_id | model |
+|-|-|-|-|-|
+| 100 | 20 | 2 | 1 | Jetta |
+| 100 | 20 | 2 | 2 | Prius |
+| 100 | 20 | 2 | 3 | F150 |
+| 200 | 20 | 1 | 1 | Jetta |
+| 200 | 20 | 1 | 2 | Prius |
+| 200 | 20 | NULL | NULL | F150 |
+
+<br><br>
+
+`RIGHT OUTER` @ `widget_size <= 20`
+
+| widget_id | widget_size | widgets.car_id | cars.car_id | model |
+|-|-|-|-|-|
+| 100 | 20 | 2 | 1 | Jetta |
+| 100 | 20 | 2 | 2 | Prius |
+| 100 | 20 | 2 | 3 | F150 |
+| 200 | 20 | 1 | 1 | Jetta |
+| 200 | 20 | 1 | 2 | Prius |
+| 200 | 20 | 1 | 3 | F150 |
+
+<br><br>
+
+`RIGHT OUTER` @ `(2 + 3) > 6`
+
+| widget_id | widget_size | widgets.car_id | cars.car_id | model |
+|-|-|-|-|-|
+| NULL | NULL | NULL | 1 | Jetta |
+| NULL | NULL | NULL | 2 | Prius |
+| NULL | NULL | NULL | 3 | F150 |
+| 100 | 20 | 2 | NULL | NULL |
+| 200 | 20 | 1 | NULL | NULL |
+| 300 | 40 | 3 | NULL | NULL |
 
 <br><br>
 
