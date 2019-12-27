@@ -5,132 +5,93 @@
 ## Friday, Dec. 27th 2019
 
 ---
-# RDBMS: Relational Database Management System
-- [Study Guide - Link](https://sites.google.com/revature.com/studyguide/databasesql)
-- The most **common way to persist data** in an **enterprise application**
-
-## "Relational"
-- just means dealing with "relations", which is a fancy word for tables
-
-<br><br>
-
-## RDBMSs
-- runs on their own server
-- have their own I/O
-
-  <br>
-
-  ![RDBMSs](what_is_rdbms.jpg)
-
-- **We persist data by communicating w/ the RDBMS using SQL** 
-
-<br><br>
-
-## SQL: Structured Query Language
-- Used to **communicate** with RDBMSs
-
-<br><br>
-
-### SQL -- Split into different sublanguages for working with functionalities:
-- [Study Guide - Link](https://sites.google.com/revature.com/studyguide/databasesql#h.p_O_Df70ohDyTa)
-- **DML: Data Manipulation Language**
-  * Used to work with actual items of data(records)
-- **DDL: Data Definition Language**
-  * Used to create / delete / alter *tables*
-- **DCL: Data Control Language:**
-  * Used to *manage users* and *permissions*
-- **TCL: Transaction Control Language**
-  * Used for controlling (start, stop, revert) transactions
-  * **Transactions** are how we *modify* the DB
-- **DQL(?): Data Query Language**
-  * [REFERENCE 1](https://geekflare.com/what-is-dql/)
-  * Documentum Query Language (DQL) is a language to query Documentum content management system. This, we use to create, manage, deliver, and archive all type of contents from text documents and spreadsheets to digital images, HTML, and XML components. (REFERENCE DEFINITION) <br><br>
-
-### Transaction
-- The *one word answer* to "why we use DB over file"
-- Transactions with a RDMS satisfy 4 properties (ACID) <br><br>
-
-### 4 Properties of Transactions (ACID)
- * Atomic Transactions
-    - Transactions succeed or fail as one unbroken unit <br><br>
- * Consistent Transactions
-    - Takes the DB from one valid state to another
-    - Valid state means following one rule: *constraints* <br><br>
- * Isolated Transactions
-    - Transactions takes place in parallel without interfering with each other <br><br>
- * Durable Transactions
-    - Transactions persist even through catastrophe (??? ways to either complete or ROLLBACK the transaction) <br><br>
-
-### Vendors and Dialects
-- Multiple orgs have written RDBMSs, we call these "vendors"
-- Each vendor has their own dialect of SQL, even though "all should" support base SQL. ???
-- We'll be learning Postgres/PostgreSQL
-- Other vendors: Oracle, MySQL, Server SQL, MariaDB, ...
-- There are also many NoSQL database
-<br><br>
-
-### SQL Statements: Control Keywords / Commands
-- [Study Guide - Link](https://sites.google.com/revature.com/studyguide/databasesql#h.p_O_Df70ohDyTa)
-- **DML** --> `INSERT`, `DELETE`, `UPDATE`
-  * (and depending on the case) `SELECT`
-- **DDL** --> `CREATE`, `ALTER`, `DROP`
-  * Also `TRUNCATE` (in Oracle, not in Postgres) *not used often but interesting to know*
-- **DCL** --> `GRANT`, `REVOKE`
-- **TCL** --> `BEGIN`, `SAVEPOINT`, `COMMIT`, `ROLLBACK`
-- **DCL** in/and/or **DQL** --> `SELECT`
-<br><br>
-
-### SQL Tool
-- [DBeaver](https://dbeaver.io/download) ??? DOWNLOAD AND INSTALL !!!!
+## RDS: Relational Database Service
+- ???
 <br><br>
 
 ---
-## `SELECT` Clauses
-
-| Keyword | Clauses | Description
-|-|-|-|
-| `SELECT` | `<columns or *>` | Pick with columns to get |
-| `FROM` | `<table>` | Pick table to get records from. Can specify database and schema: `database.schema.table` |
-| `WHERE` | `<condition>` | filters records based on a condition: i.e. `height >= 3` |
-| `GROUP BY` | `<column or expression>` | Separates records into groups and aggregates within group |
-| `HAVING` | `<condition>` | Filters groups based on a condition: i.e. `pop >= 100,000` |
-| `ORDER BY` | `<column or expression>` | Orders results |
-
----
-### Database Practice
-
-## Comic
-
-| id | title | author_id | genre_id | page_count | cost | rating |
-|-|-|-|-|-|-|-|
-|  |||||||
-
----
-## PostgreSQL Documentation
-- [Docs Link](https://postgresql.org/docs)
-
----
-## SQL Tools
-- [SQLBolt](#tbd)
-
---- 
-## DAO: Data Access Object (design pattern)
-- a single object responsible for getting data from outside the app.
-- big picture -- ??? lookup "The Flying Buttress"
-
----
-## JDBC: Java DataBase Connectivity
-- Uniform interface, implementations differ based on drivers/vendors
+## Relational Database Table Structure: Normalized Tables
+- ???
 <br><br>
 
-### Central Interfaces:
-- **Connection** 
-  * represents a connection to a DB. A "session".
-- **Statement**
-  * represents a SQL statement
-  * used for querying DB and retrieve `ResultSets`
-- **ResultSets**
-  * represents the 'results' retrieved from DB
-- **PreparedStatement**
-  * a statement which only allows values to be filled. ***Prevents SQL Injection***
-  * Compiled in Java rather than by DB
+### Why Normalize? Anomalies
+- *Anomalies are things we try to avoid*
+- **Update anomaly:** a piece of data is updated in one location and not another.
+
+  | Movie | Actor/Actress |
+  |-|-|
+  | Gone With The Wind | Vivian Leigh |
+  | Waterloo Bridge | Vivian Leigh |
+  <br><br>
+
+- **Deletion anomaly:** a piece of data cannot be deleted without also deleting other data.
+
+  | Movie | Actor/Actress | Height |
+  |-|-|-|
+  | ~~Gone With The Wind~~ | ~~Vivian Leigh~~ | ~~6~~ |
+  | ~~Waterloo Bridge~~ | ~~Vivian Leigh~~ | ~~6~~ |
+  | Gladiator | Russell Crowe | 7 |
+  <br><br>
+
+- **Creation anomaly:** a piece of data cannot be added without also providing other (potentially `NULL`) data
+
+  | Movie | Actor/Actress | Height |
+  |-|-|-|
+  | ~~Gone With The Wind~~ | ~~Vivian Leigh~~ | ~~6~~ |
+  | ~~Waterloo Bridge~~ | ~~Vivian Leigh~~ | ~~6~~ |
+  | Gladiator | Russell Crowe | 7 |
+  | Forrest Gump | Tom Hanks | `NULL` |
+  <br><br>
+
+### Functional Dependence:
+- A relationship between two pieces of data.
+- One of which is dependent on the other.
+- *also things we should try to avoid*
+
+  `X depends on Y` --> If we know `Y`, then we know `X`
+  <br><br>
+
+### Candidate Key:
+- Any column of combination of columns that uniquely identifies all records in a table.
+- All other columns functionally depend on the Candidate key.
+- There may be more than one Candidate key.
+
+  | Course Num | Dept. | Prof. |
+  |-|-|-|
+  | HUM 303 | Humanities | Smith |
+  | PHIL 500 | Philosophy | Jones |
+  | LIT 102 | Literature | Jones |
+
+  * What is a good Candidate key for the above table? 
+    - ans: `Course Num`
+  <br><br>
+
+  | Topic | Course Num | Dept. | Prof. |
+  |-|-|-|-|
+  | Books | HUM 303 | Humanities | Smith |
+  | Pamphlets | PHIL 500 | Philosophy | Jones |
+  | Other Books | LIT 102 | Literature | Jones |
+  | Articles | PHIL 500 | Philosophy | Smith |
+
+  * What is a good Candidate key for the above table? 
+    - ans: `Topic` --> since it contains **unique** values
+  <br><br>
+
+### Primary Key:
+- A Candidate Key that we decide to actually use to represent/identify each record in the table
+- **In practice**, we use an `id` column generated to be a PK
+<br><br>
+
+### Normalization
+- Solves our anomalies (C, U, D)
+- Tolerant of changes to the data model
+- Reduces redundancy
+- Comes in multiple "levels", we say *forms*
+<br><br>
+
+#### 1st Normal Form
+- Each record must be unique
+- There must be a Candidate Key
+- **Values must be atomic**
+  * A phone number is ok
+  * A list of phone numbers is not
