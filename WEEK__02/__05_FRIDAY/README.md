@@ -307,13 +307,19 @@ Cars ON <join condition>
 
   <br>
 
-  | Multiplicities | Table & Foreign Key Setup |
-  |-|-|
-  | 1 to 1 | Can be same table |
-  | 1 to n | Two tables, Foreign Key on many side |
-  | n to n | Three tables (one **junction** table); two Foreign Keys on junction table |
+| Multiplicities | Table & Foreign Key Setup |
+|-|-|
+| 1 to 1 | Can be same table |
+| 1 to n | Two tables, Foreign Key on many side |
+| n to n | Three tables (one **junction** table); two Foreign Keys on junction table |
 
-  <br><br>
+<br><br>
+
+  ![Multiplicity Example](MultiplicityExample.png)
+
+  ![Multiplicity Example 2](MultiplicityExample2.png)
+
+<br><br>
 
   #### MULTIPLICITY EXAMPLE
 
@@ -344,12 +350,6 @@ Cars ON <join condition>
   | 1 | 3 |
   | 2 | 2 |
   | 2 | 3 |
-
-  <br><br>
-
-  ![Multiplicity Example](MultiplicityExample.png)
-
-  ![Multiplicity Example 2](MultiplicityExample2.png)
 
 <br><br>
 
