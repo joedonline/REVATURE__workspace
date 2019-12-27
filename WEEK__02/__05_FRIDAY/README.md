@@ -193,6 +193,7 @@
   <br><br>
 
 **Widgets**
+
 | widget_id | widget_size | car_id |
 |-|-|-|
 | 100 | 20 | 2 |
@@ -202,6 +203,7 @@
 <br>
 
 **Cars**
+
 | car_id | model |
 |-|-|
 | 1 | Jetta |
