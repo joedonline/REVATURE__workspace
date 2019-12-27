@@ -356,7 +356,11 @@ Cars ON <join condition>
 ---
 ### `ALTER TABLE` ????
 
+
 ---
 ### PRACTICAL EXERCISE: Interactive SQL
 - [SQLBolt - REFERENCE](https://sqlbolt.com/)
 <br><br>
+
+---
+## ( [To Watch: Programming Foundations: Databases](https://www.lynda.com/SQL-tutorials/Programming-Foundations-Databases/784293-2.html) )
