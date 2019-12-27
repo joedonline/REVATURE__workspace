@@ -296,6 +296,64 @@ Cars ON <join condition>
 <br><br>
 
 ---
+## Multiplicity
+- Refers to the cardinality
+
+### Multiplicities
+- One-to-many
+- Many-to-one
+- Many-to-many
+- One-to-one
+
+  <br>
+
+  | Multiplicities | Table & Foreign Key Setup |
+  |-|-|
+  | 1 to 1 | Can be same table |
+  | 1 to n | Two tables, Foreign Key on many side |
+  | n to n | Three tables (one **junction** table); two Foreign Keys on junction table |
+
+  <br><br>
+
+  #### MULTIPLICITY EXAMPLE
+
+  **Playlists**
+
+  | id | name |
+  |-|-|
+  | 1 | Mixtape '06 |
+  | 2 | Jamz |
+
+  <br>
+
+  **Tracks**
+
+  | id | name |
+  |-|-|
+  | 1 | trouble |
+  | 2 | problems |
+  | 3 | sorrows |
+
+  <br>
+
+  **`Playlist_Track`**
+
+  | `p_id` | `t_id` |
+  |-|-|
+  | 1 | 1 |
+  | 1 | 3 |
+  | 2 | 2 |
+  | 2 | 3 |
+
+  <br><br>
+
+  ![Multiplicity Example](MultiplicityExample.png)
+
+  ![Multiplicity Example 2](MultiplicityExample2.png)
+
+<br><br>
+
+---
 ### PRACTICAL EXERCISE: Interactive SQL
 - [SQLBolt - REFERENCE](https://sqlbolt.com/)
 <br><br>
