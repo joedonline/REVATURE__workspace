@@ -55,6 +55,7 @@
 - Any column of combination of columns that uniquely identifies all records in a table.
 - All other columns functionally depend on the Candidate key.
 - There may be more than one Candidate key.
+- Must a minimal combo ??? column(s)
 
   | Course Num | Dept. | Prof. |
   |-|-|-|
@@ -82,6 +83,10 @@
 - **In practice**, we use an `id` column generated to be a PK
 <br><br>
 
+### Composite Key
+- A candidate key made of multiple columns
+<br><br>
+
 ### Normalization
 - Solves our anomalies (C, U, D)
 - Tolerant of changes to the data model
@@ -89,9 +94,49 @@
 - Comes in multiple "levels", we say *forms*
 <br><br>
 
+
 #### 1st Normal Form
 - Each record must be unique
 - There must be a Candidate Key
 - **Values must be atomic**
   * A phone number is ok
   * A list of phone numbers is not
+  <br><br>
+
+#### 2nd Normal Form
+- All non-Candidate-key columns must depend on the **entirety** of every candidate key.
+- If there are no composite keys:
+  
+  1st Normal Form --> 2nd Normal Form
+<br><br>
+
+#### 3rd Normal Form
+- No non-Candidate-key column depends on any other non-Candidate-key column
+
+  | `CityId` | `City` | `State` | `Over200Target` | `Sales` |
+  |-|-|-|-|-|
+  | 1 | Savannah | GA | No | 200 |
+  | 2 | Springfield | IL | Yes | 500 |
+  | 3 | Louisville | KY | Yes | 300 |
+  | 4 | NYC | NY | No | 199 |
+  <br><br>
+
+  | id | title | mediatype | price |
+  |-|-|-|-|
+  | 1 | Mulan OST | Casette | 0.50 |
+  | 2 | Paint In Black | Casette | 0.50 |
+  | 3 | Up | DVD | 2.00 |
+  | 4 | GWTW | DVD | 2.00 |
+  <br><br>
+
+### EXAMPLES
+
+| `City Id` | `City` | `State` | `Region` | `Sales` |
+|-|-|-|-|-|
+| 1 | Savannah | GA | South | 200 |
+| 2 | Springfield | IL | Midwest | 500 |
+| 3 | Louisville | KY | Midwest | 300 |
+| 4 | NYC | NY | NorthEast | 199 |
+
+- Primary Key: City Id
+- Candidate Key(s): City, State, City Id

@@ -23,7 +23,7 @@ public class ComicDaoPostgres implements ComicDao {
 		try {
 			System.getenv("some_password"); // Check 'Run > Run Configurations...' menu
 			conn = DriverManager.getConnection(
-					"jdbc:postgresql://localhost:5433/postgres", "postgres", envPw.getPw());
+					"jdbc:postgresql://localhost:5433/postgres", "postgres", Env.getPwd());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
