@@ -48,7 +48,7 @@
 
 ### Transaction
 - The *one word answer* to "why we use DB over file"
-- Transactions with a RDMS satisfy 4 properties (ACID) <br><br>
+- Transactions with a RDBMS satisfy 4 properties (ACID) <br><br>
 
 ### 4 Properties of Transactions (ACID)
  * Atomic Transactions
