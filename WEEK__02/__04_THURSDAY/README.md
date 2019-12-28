@@ -89,7 +89,7 @@
 
 | Keyword | Clauses | Description
 |-|-|-|
-| `SELECT` | `<columns or *>` | Pick with columns to get |
+| `SELECT` | `<columns or *>` | The [SQL SELECT](https://sites.google.com/revature.com/studyguide/databasesql#h.p_zS24Tk7OET-Q) statement is used to fetch the data from a database table which returns this data in the form of a result table. These result tables are called result-sets. |
 | `FROM` | `<table>` | Pick table to get records from. Can specify database and schema: `database.schema.table` |
 | `WHERE` | `<condition>` | filters records based on a condition: i.e. `height >= 3` |
 | `GROUP BY` | `<column or expression>` | Separates records into groups and aggregates within group |
