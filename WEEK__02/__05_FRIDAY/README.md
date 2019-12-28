@@ -6,7 +6,9 @@
 
 ---
 ## RDS: Relational Database Service
-- ???
+- The Amazon Relational Database Service (RDS) enables developers to create and manage relational databases in the cloud.
+- [REFERENCE - sumologic.com](https://www.sumologic.com/insight/what-is-amazon-rds/)
+
 <br><br>
 
 ---
