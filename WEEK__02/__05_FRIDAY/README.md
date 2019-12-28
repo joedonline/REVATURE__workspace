@@ -12,8 +12,166 @@
 <br><br>
 
 ---
+## Relational Databases
+
+<br>
+
+  ![Relational Database Structure](Relational-Database-Structure-Example-2.png)
+
+<br><br>
+
 ## Relational Database Table Structure: Normalized Tables
-- ???
+
+### What is Normalization?
+- Normalization is a database design technique which organizes tables in a manner that reduces redundancy and dependency of data.
+- It divides larger tables to smaller tables and links them using relationships.
+- [REFERENCE - guru99](https://www.guru99.com/database-normalization.html)
+
+<br>
+
+  ![DB Normalization in SQL Server](db_normalization_sql_server.png)
+
+<br>
+
+  ![Normalized vs. Denormalized](pre_joining_tables_1x.png)
+
+<br><br>
+
+#### Without Normalization
+
+  ![Normalization Table 1](NormalizationTable1.png)
+
+<br><br>
+
+## Database Normal Forms
+
+### 1NF (First Normal Form) Rules
+- Each table cell should contain a single value.
+- Each record needs to be unique.
+
+<br>
+
+  Example
+
+  ![1NF example](1NF.png)
+
+<br><br>
+
+#### What is a KEY?
+- A KEY is a value used to identify a record in a table uniquely.
+- A KEY could be a single column or combination of multiple columns
+
+<br>
+
+##### ** Note: Columns in a table that are NOT used to identify a record uniquely are called non-key columns.
+
+<br><br>
+
+#### What is a Primary Key?
+- A primary key is a single column value used to identify a database record uniquely.
+
+<br>
+
+**It has following attributes:**
+- A primary key cannot be NULL
+- A primary key value must be unique
+- The primary key values should rarely be changed
+- The primary key must be given a value when a new record is inserted.
+
+<br><br>
+
+#### What is Composite Key?
+- A composite key is a primary key composed of multiple columns used to identify a record uniquely
+
+<br>
+
+  ![Composite Key](composite_key_needed.png)
+
+<br><br>
+
+### 2NF (Second Normal Form) Rules
+- Rule 1- Be in 1NF
+- Rule 2- Single Column Primary Key
+
+<br>
+
+  ![2NF](2NF.png)
+
+<br>
+
+#### Database - Foreign Key
+
+- Foreign Key references the primary key of another Table! 
+- It helps connect your Tables
+
+<br>
+
+**What a Foreign Key does**
+- A foreign key can have a different name from its primary key
+- It ensures that rows in one table have corresponding rows in another
+- Unlike the Primary key, they do not have to be unique. Most often they aren't
+- Foreign keys can be null even though primary keys can not
+
+<br>
+
+  ![Foreign Key demonstrated](foreign_key_demonstrated.png)
+
+<br>
+
+#### Why do you need a foreign key?
+
+  ![Why a Foreign Key?](why_do_you_need_a_foreign_key.png)
+
+<br>
+
+#### What are transitive functional dependencies?
+- A transitive functional dependency is when changing a non-key column, might cause any of the other non-key columns to change.
+
+<br>
+
+  ![Transitive Functional Dependencies](transitive_functional_dependencies.png)
+
+<br><br>
+
+### 3NF (Third Normal Form) Rules
+- Rule 1- Be in 2NF
+- Rule 2- Has no transitive functional dependencies
+
+<br>
+
+**3NF Example**
+
+  ![3NF Example](3NF_example.png)
+
+<br>
+
+- We have again divided our tables and created a new table which stores Salutations. 
+- There are no transitive functional dependencies, and hence our table is in 3NF
+- In Table 3 Salutation ID is primary key, and in Table 1 Salutation ID is foreign to primary key in Table 3
+
+<br><br>
+
+## Other Database Normal Forms
+
+### Boyce-Codd Normal Form (BCNF)
+- Even when a database is in 3rd Normal Form, still there would be anomalies resulted if it has more than one Candidate Key.
+- Sometimes is BCNF is also referred as 3.5 Normal Form.
+
+<br>
+
+### 4NF (Fourth Normal Form) Rules
+- If no database table instance contains two or more, independent and multivalued data describing the relevant entity, then it is in 4th Normal Form.
+
+<br>
+
+### 5NF (Fifth Normal Form) Rules
+- A table is in 5th Normal Form only if it is in 4NF and it cannot be decomposed into any number of smaller tables without loss of data.
+
+<br>
+
+### 6NF (Sixth Normal Form) Proposed
+- 6th Normal Form is not standardized yet. However, it is being discussed by database experts for some time. Hopefully, we would have a clear & standardized definition for 6th Normal Form in the near future...
+
 <br><br>
 
 ### Why Normalize? Anomalies
