@@ -67,8 +67,28 @@
 
 <br><br>
 
+#### What is a Candidate Key?
+- A candidate key is a column, or set of columns, in a table that can uniquely identify any database record without referring to any other data. ([ REFERENCE ](https://www.techopedia.com/definition/21/candidate-key))
+- Each table may have one or more candidate keys. If one candidate key is unique, and it is called the primary key.
+
+<br>
+
+  ![Candidate Key diagram 1](keyCandidate.gif)
+
+<br>
+
+  ![Candidate Key diagram 2](relational-database-management-system-34-728.jpg)
+
+<br>
+
+  ![Candidate Key reference](types-of-keys-in-database-management-system-by-dr-kamal-gulati-7-638.jpg)
+
+<br><br>
+
 #### What is a Primary Key?
 - A primary key is a single column value used to identify a database record uniquely.
+- A Candidate Key that we decide to actually use to represent/identify each record in the table
+- **In practice**, we use an `id` column generated to be a PK
 
 <br>
 
@@ -82,6 +102,7 @@
 
 #### What is Composite Key?
 - A composite key is a primary key composed of multiple columns used to identify a record uniquely
+- When a key is composed of more than one column, it is known as a composite key ([ Reference - techopedia ](https://www.techopedia.com/definition/21/candidate-key)).
 
 <br>
 
@@ -149,6 +170,15 @@
 - There are no transitive functional dependencies, and hence our table is in 3NF
 - In Table 3 Salutation ID is primary key, and in Table 1 Salutation ID is foreign to primary key in Table 3
 
+<br>
+
+#### Functional Dependence:
+- A relationship between two pieces of data.
+- One of which is dependent on the other.
+- *also things we should try to avoid*
+
+  `X depends on Y` --> If we know `Y`, then we know `X`
+
 <br><br>
 
 ## Other Database Normal Forms
@@ -176,16 +206,41 @@
 
 ### Why Normalize? Anomalies
 - *Anomalies are things we try to avoid*
-- **Update anomaly:** a piece of data is updated in one location and not another.
+
+<br>
+
+#### What are Anomalies?
+- Anomalies are problems that can occur in poorly planned, un-normalised databases where all the data is stored in one table (a flat-file database).
+- [REFERENCE - data anomalies](http://jhigh.co.uk/Higher/dbases/anomalies.html)
+
+<br>
+
+### The Three Anomalies (+ 1)
+
+#### Update anomaly
+- [ REFERENCE - Fandom ](https://databasemanagement.fandom.com/wiki/Category:Data_Anomalies) -  An update anomaly is a data inconsistency that results from data redundancy and a partial update. For example, each employee in a company has a department associated with them as well as the student group they participate in.
+- **Classroom definition** - A piece of data is updated in one location and not another.
+
+  <br>
+
+  **Example 1**
 
   | Movie | Actor/Actress |
   |-|-|
   | Gone With The Wind | Vivian Leigh |
   | Waterloo Bridge | Vivian Leigh |
   
+  <br>
+
+  **Example 2**
+
+  ![Update Anomaly - Round Hill](update_anomaly_round_hill.png)
+
   <br><br>
 
-- **Deletion anomaly:** a piece of data cannot be deleted without also deleting other data.
+#### Deletion anomaly
+- [ REFERENCE - opentextbc ](https://opentextbc.ca/dbdesign01/chapter/chapter-10-er-modelling/) - A deletion anomaly occurs when you delete a record that may contain attributes that shouldn’t be deleted.
+- a piece of data cannot be deleted without also deleting other data.
 
   | Movie | Actor/Actress | Height |
   |-|-|-|
@@ -193,10 +248,20 @@
   | ~~Waterloo Bridge~~ | ~~Vivian Leigh~~ | ~~6~~ |
   | Gladiator | Russell Crowe | 7 |
 
+  <br>
 
-  <br><br>
+#### Insertion anomaly
+- When inserting vital data into the database is not possible because other data is not already there. ([ REFERENCE ](https://databasemanagement.fandom.com/wiki/Data_Anomalies))
+- This occurs when a user tries to enter a new record but the record cannot be added until the user provides many unnecessary attributes of the same relation.
 
-- **Creation anomaly:** a piece of data cannot be added without also providing other (potentially `NULL`) data
+  <br>
+
+  ![Insertion anomaly](maxresdefault.jpg)
+
+  <br>
+
+#### ** Creation anomaly 
+- a piece of data cannot be added without also providing other (potentially `NULL`) data
 
   | Movie | Actor/Actress | Height |
   |-|-|-|
@@ -207,13 +272,8 @@
 
   <br><br>
 
-### Functional Dependence:
-- A relationship between two pieces of data.
-- One of which is dependent on the other.
-- *also things we should try to avoid*
-
-  `X depends on Y` --> If we know `Y`, then we know `X`
-  <br><br>
+---
+### *CLASSROOM REFERENCE***
 
 ### Candidate Key:
 - Any column of combination of columns that uniquely identifies all records in a table.
@@ -241,11 +301,6 @@
   * What is a good Candidate key for the above table? 
     - ans: `Topic` --> since it contains **unique** values
   <br><br>
-
-### Primary Key:
-- A Candidate Key that we decide to actually use to represent/identify each record in the table
-- **In practice**, we use an `id` column generated to be a PK
-<br><br>
 
 ### Composite Key
 - A candidate key made of multiple columns
