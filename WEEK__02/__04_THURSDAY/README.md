@@ -118,9 +118,20 @@
 - a single object responsible for getting data from outside the app.
 - big picture -- ??? lookup "The Flying Buttress"
 
+<br><br>
+
+  ![DAO Implementation](dao_pattern_uml_diagram.jpg)
+
+<br><br>
+
 ---
 ## JDBC: Java DataBase Connectivity
+- is a standard Java API for database-independent connectivity between the Java programming language and a wide range of databases.
 - Uniform interface, implementations differ based on drivers/vendors
+<br><br>
+
+  ![JDBC Diagram](jdbc_architecture.jpg)
+
 <br><br>
 
 ### Central Interfaces:
