@@ -96,6 +96,32 @@
 | `HAVING` | `<condition>` | Filters groups based on a condition: i.e. `pop >= 100,000` |
 | `ORDER BY` | `<column or expression>` | Orders results |
 
+<br><br>
+
+---
+### `ALTER TABLE`
+- The `SQL ALTER TABLE` command is used to add, delete or modify columns in an existing table. 
+- You should also use the `ALTER TABLE` command to add and drop various constraints on an existing table.
+- [TutorialsPoint Reference](https://www.tutorialspoint.com/sql/sql-alter-command.htm)
+
+
+<br>
+
+#### `ALTER TABLE` Syntax
+
+| Description | Query |
+|-|-|
+| The basic syntax of an ALTER TABLE command to add a New Column in an existing table is as follows. | `ALTER TABLE table_name ADD column_name datatype;` |
+| The basic syntax of an ALTER TABLE command to DROP COLUMN in an existing table is as follows. | `ALTER TABLE table_name DROP COLUMN column_name;` |
+| The basic syntax of an ALTER TABLE command to change the DATA TYPE of a column in a table is as follows. | `ALTER TABLE table_name MODIFY COLUMN column_name datatype;` |
+| The basic syntax of an ALTER TABLE command to add a NOT NULL constraint to a column in a table is as follows. | `ALTER TABLE table_name MODIFY column_name datatype NOT NULL;` |
+| The basic syntax of ALTER TABLE to ADD UNIQUE CONSTRAINT to a table is as follows. | `ALTER TABLE table_name;` <br> `ADD CONSTRAINT MyUniqueConstraint UNIQUE(column1, column2...);` |
+| The basic syntax of an ALTER TABLE command to ADD CHECK CONSTRAINT to a table is as follows. | `ALTER TABLE table_name` <br> `ADD CONSTRAINT MyUniqueConstraint CHECK (CONDITION);` |
+| The basic syntax of an ALTER TABLE command to ADD PRIMARY KEY constraint to a table is as follows. | `ALTER TABLE table_name` <br> `ADD CONSTRAINT MyPrimaryKey PRIMARY KEY (column1, column2...);` |
+| The basic syntax of an ALTER TABLE command to DROP CONSTRAINT from a table is as follows. | `ALTER TABLE table_name` <br> `DROP CONSTRAINT MyUniqueConstraint;` |
+
+<br><br>
+
 ---
 ### Database Practice
 

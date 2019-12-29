@@ -273,7 +273,7 @@
   <br><br>
 
 ---
-### *CLASSROOM REFERENCE***
+#### *CLASSROOM NOTES****
 
 ### Candidate Key:
 - Any column of combination of columns that uniquely identifies all records in a table.
@@ -377,6 +377,12 @@
 ## Joins
 - Joins combine records from 2+ tables.
 - The result of a Join will have columns from all involved tables.
+
+<br>
+
+#### Joins ([ Study Guide reference ](https://sites.google.com/revature.com/studyguide/databasesql#h.p__Y6lnTqvLLN0))
+- The SQL Joins clause is used to combine records from two or more tables in a database.
+- A JOIN is a means for combining fields from two tables by using values common to each.
 
 <br><br>
 
@@ -511,6 +517,36 @@ Cars ON <join condition>
 <br><br>
 
 ---
+## MULTIPLICITY
+- `Multiplicity = Cardinality + Participation`
+- [StackOverflow Reference](https://stackoverflow.com/questions/17877582/multiplicity-vs-cardinality)
+
+<br>
+
+##### Simply put:
+- **Multiplicity** is made up of a *lower* and an *upper* cardinality.
+- **Cardinality** is *how many elements* are in a set.
+- Thus, Multiplicity tells you the minimum and maximum allowed members in the set. 
+- ***Multiplicity and Cardinality are not synonymous.***
+- [StackOverflow Reference](https://stackoverflow.com/questions/17877582/multiplicity-vs-cardinality)
+
+<br>
+
+#### Cardinality
+- Denotes the maximum number of possible relationship occurrences in which a certain entity can participate in (in simple terms: at most).
+- [StackOverflow Reference](https://stackoverflow.com/questions/17877582/multiplicity-vs-cardinality)
+
+<br>
+
+#### Participation
+- Denotes if all or only some entity occurrences participate in a relationship (in simple terms: at least).
+- [StackOverflow Reference](https://stackoverflow.com/questions/17877582/multiplicity-vs-cardinality)
+
+<br><br>
+
+---
+#### *CLASSROOM NOTES***
+
 ## Multiplicity
 - Refers to the cardinality
 
@@ -567,10 +603,6 @@ Cars ON <join condition>
   | 2 | 3 |
 
 <br><br>
-
----
-### `ALTER TABLE` ????
-
 
 ---
 ### PRACTICAL EXERCISE: Interactive SQL
