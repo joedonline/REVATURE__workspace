@@ -160,10 +160,26 @@
 
 <br><br>
 
+---
+## JDBC Basics + Terminologies
+
 ![JDBC Basic Flow](jdbc_basic_flow.png)
+
+<br>
+
+![Terms: Connections](jdbc_terms_connections.png)
+
+<br>
+
+![Terms: Executions](jdbc_terms_executions.png)
+
+<br>
+
+![Terms: Transactions](jdbc_terms_transactions.png)
 
 <br><br>
 
+---
 ### Central Interfaces:
 - **Connection** 
   * represents a connection to a DB. A "session".
