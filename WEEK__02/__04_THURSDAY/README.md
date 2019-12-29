@@ -160,6 +160,10 @@
 
 <br><br>
 
+![JDBC Basic Flow](jdbc_basic_flow.png)
+
+<br><br>
+
 ### Central Interfaces:
 - **Connection** 
   * represents a connection to a DB. A "session".
