@@ -212,3 +212,53 @@ Set B
 |-|-|
 | 2 | `B` |
 | 4 | `C` |
+
+<br>
+
+---
+## Functions (many are Postgres-specific)
+- [***know this***] Take optional input do things, return optional output
+- [***know this***] Can pass in and return values, records, sets, and more
+- Can return **SETs** and **CURSORs**
+- Functions are strings to be run using a specified language.
+- We use `IN`, `OUT`, and similar to let SQL know how the function works
+
+<br>
+
+**Why Functions**
+- Abstraction
+- Convenience
+
+<br>
+
+### Mark Parameters
+- as `IN`, `OUT`, and `INOUT` to take arguments and return multiple values
+- Can also specify a return with `RETURNING`
+
+<br>
+
+---
+## Triggers 
+- ???? - [REFERENCE to read](https://www.essentialsql.com/what-is-a-database-trigger/)
+- Automatic behavior on `INSERT`/`UPDATE`/`DELETE`
+- Specify using a function that `RETURNs` trigger
+- We have access to `NEW` and `OLD` to interact with the prior record and the new record
+
+**Good examples**
+- `Last_updated` column
+- Prevent deletion of important records
+
+```
+RAISE 'Some Problem'
+```
+
+**These are like Exceptions in Java
+
+<br>
+
+---
+## Cursors
+- [***know this***] A pointer to a `ResultSet`, can "scroll" forward through records
+- [***know this***] Used for results that won't fit in memory
+- In Postgres, `pl/pgsql` uses cursors and loops, they are however mostly unnecessary
+- Can also be used for parallel processing
