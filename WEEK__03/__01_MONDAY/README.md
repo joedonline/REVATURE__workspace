@@ -263,3 +263,62 @@ RAISE 'Some Problem'
 - [***know this***] Used for results that won't fit in memory
 - In Postgres, `pl/pgsql` uses cursors and loops, they are however mostly unnecessary
 - Can also be used for parallel processing
+
+<br>
+
+---
+## Stored Procedures
+- [Lynda reference](https://www.lynda.com/Java-tutorials/Calling-stored-procedures/110284/117316-4.html)
+- In Postgres, like a function that can use TCL
+
+<br>
+
+---
+## Indices
+- If database is acting slow, start looking here (through indices)
+- Indeces on **unique** columns are automatically created. These are called **clustered indices**.
+- Indices that we manually create are **unclustered**.
+- Since `PRIMARY KEY = UNIQUE NOT NULL`, every table has an index on its Primary Key.
+
+<br>
+
+### Index
+- An index on some column(s) serves like an index in a book
+- It allows your queries to quickly find any indexed value
+- Will speed up queries that condition on indexed columns.
+- If `I` index "size" then `S * F myT W size > 30;` will be much faster.
+- **Downside**: Will slowdown writes
+  * updates index and rewrites table under the hood
+  * 2 tasks performed at a given time
+- Only make indices for columns often used in queries
+
+<br>
+
+**Indeces under the hood**
+- at least in Postgres, uses B-trees
+- [B-trees reference](https://www.cs.cornell.edu/courses/cs3110/2012sp/recitations/rec25-B-trees/rec25.html)
+
+<br>
+
+---
+## Views
+- A `VIEW` is just a saved query with a name
+
+<br>
+
+### A `MATERIALIZED VIEW`
+- [Lynda reference](https://www.lynda.com/SQL-tutorials/Advanced-SQL-Query-Tuning-Performance-Optimization/774911-2.html)
+- is a saved `ResultSet`
+- It must be `REFRESH`'d to get updated values
+
+<br>
+
+**Example `VIEW` query**
+
+  ```
+  CREATE VIEW myView AS SELECT * FROM myTable;
+
+  SELECT * FROM myView;
+
+  REFRESH MATERIALIZED VIEW myView;
+  ```
