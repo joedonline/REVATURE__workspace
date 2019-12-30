@@ -326,3 +326,166 @@ RAISE 'Some Problem'
 
   REFRESH MATERIALIZED VIEW myView;
   ```
+
+---
+## Chinook Database
+
+### SAMPLE SQL
+
+```
+CREATE DATABASE chinook;
+
+SELECT * FROM chinook;
+
+SELECT * FROM actors;
+
+DROP DATABASE chinook;
+
+SELECT * FROM tracks;
+
+SELECT tracks.name AS "Track",
+	albums.title AS "Album",
+	artists.name AS "Artist",
+	genres.name AS "Genre",
+	tracks.composer AS "Composer"
+FROM tracks
+INNER JOIN albums ON tracks.album_id = albums.id;
+INNER JOIN artists ON albums.artist_id = albums.id;
+INNER JOIN genres ON tracks.genre_id = genres.id;
+	
+	
+SELECT *
+FROM tracks
+INNER JOIN albums ON tracks.album_id = albums.id;
+INNER JOIN artists ON albums.artist_id = albums.id;
+INNER JOIN genres ON tracks.genre_id = genres.id;
+
+
+SELECT * FROM musicview;
+
+
+SELECT SUBSTRING(first_name FROM 1 FOR 1) || SUBSTRING(last_name FROM 1 FOR 1) 
+	AS "Initials", first_name, last_name
+FROM customers;
+
+
+-- Function for initials
+CREATE OR REPLACE FUNCTION get_customer_initials(id INTEGER) RETURNS VARCHAR(2);
+AS
+
+$body$ -- just fancy string delimiters
+SELECT SUBSTRING(first_name FROM 1 FOR 1) || SUBSTRING(last_name FROM 1 FOR 1) 
+	AS "Initials", first_name, last_name
+FROM customers
+WHERE customers.id = id;
+$body$ LANGUAGE SQL;
+
+-- Function for employees before 1965
+CREATE OR REPLACE FUNCTION get_employees_before_1965() RETURNS SETOF employees
+AS
+$$
+SELECT * FROM employees
+WHERE EXTRACT(YEAR FROM birth_date) < 1965 -- EXTRACT to pull things out of timestamp
+$$ LANGUAGE SQL;
+
+SELECT * FROM get_employees_before_1965();
+
+
+-- Using UNION, INTERSECT
+SELECT * FROM get_employees_before_1965();
+UNION
+SELECT * FROM employees;
+
+SELECT * FROM get_employees_before_1965();
+INTERSECT
+SELECT * FROM employees;
+
+SELECT * FROM get_employees_before_1965();
+EXCEPT
+SELECT * FROM employees;
+
+
+-- Triggers require a function, we'll use plgpgsql
+CREATE OR REPLACE FUNCTION stop_invoice_delete_over_10() RETURNS TRIGGER
+AS
+$$
+BEGIN 
+	RAISE 'Cannot delete invoice, too expensive';
+END
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER before_delete_expensive_invoice
+BEFORE DELETE
+ON invoices
+FOR EACH ROW -- this option is FOR EACH STATEMENT
+-- Here is where we have OLD and NEW for the old row and the new row
+WHEN (OLD.total > 10)
+EXECUTE PROCEDURE stop_invoice_delete_over_10();
+
+SELECT * FROM invoices WHERE id = 5;
+DELETE FROM invoices WHERE id = 5;
+```
+
+---
+## Transaction Isolation Levels
+???
+- [Lynda reference](https://www.lynda.com/SQL-Server-tutorials/Transaction-isolation/688526/735504-4.html)
+- **Level 1: Read Uncommitted** - anarchy, read values/changes before transactions commit them. Allows all problems.
+- **Level 2: Read Committed** - read values/changes as soon as a transaction commits them. Prevents only dirty read.
+- **Level 3: Repeatable Read** - read new values as soon as a transaction commits them, but don't read changes.
+- **Level 4: Serializable** - don't read changes or new values for the duration of the transaction. Prevents phantom reads. Transactions are evaluated *as if* they took place in sequence.
+
+**Level 1 is fastest**
+**Level 4 is the default**
+
+<br>
+
+**Transaction A**
+
+```
+BEGIN;
+S * F <some_table> W id = 1;
+
+U + S val = 3 W id = 1;
+
+I INTO <some_table> V (5, 50);
+
+COMMIT;
+```
+
+**`+`**
+
+| id | val |
+|-|-|
+| 1 | 0 |
+| 2 | 10 |
+| 3 | 20 |
+| 4 | 40 |
+| 5 | 50 |
+
+
+<br>
+
+**Transaction B**
+
+```
+BEGIN;
+S * F <some_table> W id = 1;
+
+S * F <some_table> W id = 1;
+
+
+S * F <some_table> W id = 1;
+
+S * F <some_table> i;
+COMMIT;
+```
+
+<br>
+
+### Concurrency Problems
+- **Dirty read** - reading uncommited data
+- **Nonrepeatable read** - reading committed data whose value has changed during your transaction
+- **Phantom read** - reading newly inserted records that were committed by another transaction
+
+<br>
