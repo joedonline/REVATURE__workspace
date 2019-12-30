@@ -258,6 +258,7 @@ RAISE 'Some Problem'
 
 ---
 ## Cursors
+- Declared with `refcursor`
 - [***know this***] A pointer to a `ResultSet`, can "scroll" forward through records
 - [***know this***] Used for results that won't fit in memory
 - In Postgres, `pl/pgsql` uses cursors and loops, they are however mostly unnecessary
