@@ -126,3 +126,89 @@
 #### Transaction Isolation levels
 
 #### Set ops
+
+---
+## Subqueries
+- Use a query inside a query
+
+  ```
+  SELECT * FROM ( 
+    SELECT col1, col2 FROM <a_table> 
+  );
+  ```
+
+- Can be more readable
+- Can use the results of queries in conditions (`WHERE` or `HAVING` clauses)
+
+**Quick example:**
+
+```
+S * F myT W myC = (S MAX(myC) F myT);
+```
+
+<br>
+
+---
+## SET operations
+- Combine records from multiple ResultSets
+- The columns must align or match (datatype, number)
+
+### Combine using:
+- `UNION` - all records from both
+- `INTERSECT` - all records that appear in both A and B`
+- `EXCEPT` - all records in A except those that appear in B
+
+<br>
+
+**Example:**
+
+Set A
+
+| myC1 | myC2 |
+|-|-|
+| 1 | 'A' |
+| 2 | 'B' |
+| 4 | 'C' |
+
+<br>
+
+Set B
+
+| myC1 | myC2 |
+|-|-|
+| 1 | 'A' |
+| 3 | 'B' |
+| 4 | 'D' |
+
+  ```
+  (SELECT * FROM A)
+  UNION
+  (SELECT * FROM B);
+  ```
+
+**`UNION` output:**
+
+|||
+|-|-|
+| 1 | `A` |
+| 2 | `B` |
+| 3 | `B` |
+| 4 | `C` |
+| 4 | `D` |
+
+<br>
+
+**`INTERSECT` output**
+
+|||
+|-|-|
+| 1 | `A`
+
+<br>
+
+**`EXCEPT` output**
+
+|||
+|-|-|
+| 2 | `B` |
+| 4 | `C` |
