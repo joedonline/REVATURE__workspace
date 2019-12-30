@@ -5,4 +5,124 @@
 ## Monday, Dec. 30th 2019
 
 ---
-# TITLE
+# DATABASE REVIEW for quiz/assessments
+
+#### Why Databases
+
+#### AWS RDS
+
+#### SQL Sublanguages and keywords
+
+#### SELECT Clauses
+
+#### `LIKE`
+- Checks whether a string matches a pattern
+
+  ```
+  WHERE <name> LIKE 'Name %';
+  ```
+
+##### Wildcards
+- `%` matches any number of characters
+- `_` a single character
+
+#### Aggregate Functions
+- `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+
+#### Scalar Functions
+- `UPPER`, `LOWER`, `CHAR_LENGTH`, `TRIM`, `CAST`
+
+#### `EXTRACT` - ????
+
+<br>
+
+#### `JOIN`s - ????
+
+<br>
+
+#### ACID Transactions:
+- **Atomic** --> Indivisible, entire transaction succeeds or fail altogether
+- **Consistent** --> db remains in a valid state, goes from one valid state to another
+- **Isolated** --> Transactions in progress don't interfere with each other
+- **Durable** --> Hard to break, work in case of catastrophe
+
+<br>
+
+#### Candidate Keys
+- potential unique identifier
+- can be 1 or more columns
+
+#### Primary Keys
+- 1 column
+- uniquely identifies a record (or entity)
+
+#### Foreign Keys
+- primary key of another table referenced in another table
+
+#### Normalization
+
+#### Multiplicity and how to represent
+- digrams ????
+
+#### JDBC
+- ????
+
+#### SQL Injection
+- ????
+
+#### DAO
+- ????
+
+#### Design Patterns
+- Gang of Four
+- ????
+
+<br>
+
+---
+## LOGGING - `log4j`
+- [log4j properties - in Java](log4j.properties)
+
+<br>
+
+### Logging
+- Keep a record of program function
+- We should keep record progress, steps, problems, errors, etc.
+- To differentiate log messages, we have logging levels
+
+<br>
+
+#### Logging Levels:
+- **OFF** - no logging (don't log to this, just a setting)
+- **FATAL** - log fatal problems here
+- **ERROR** - exceptions, errors, problems that occur
+- **WARN** - state that may cause error/exception
+- **INFO** - broad information about state and function
+- **DEBUG** - finer-grained infomation, useful for debugging
+- **TRACE** - very detailed trace of program function
+- **ALL** - all levels (don't log to this, just a setting)
+
+---
+## Other Topics
+
+#### Subqueries
+
+#### pl/pgsql
+
+#### Triggers
+- [Lynda reference](https://www.lynda.com/SQL-tutorials/SQL-Essential-Training/2825374-2.html)
+
+#### Functions
+
+#### Cursors
+
+#### Stored Procedures
+- [Lynda reference](https://www.lynda.com/Java-tutorials/Calling-stored-procedures/110284/117316-4.html)
+
+#### Indices
+
+#### Views
+
+#### Transaction Isolation levels
+
+#### Set ops
