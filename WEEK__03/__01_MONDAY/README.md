@@ -122,6 +122,7 @@
 
 #### Stored Procedures
 - [Lynda reference](https://www.lynda.com/Java-tutorials/Calling-stored-procedures/110284/117316-4.html)
+- [CART website reference - basic definitioin](https://carto.com/help/working-with-data/sql-stored-procedures/)
 
 #### Indices
 
