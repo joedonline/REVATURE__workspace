@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: ivory;
+  color: rgb(0,0,16);
+  height: 100vh;
+  padding-top: 2rem;
+  background-image: url("https://picsum.photos/id/1011/880/320");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#app > h1 {
+  color: ivory;
+  animation: chameleon 8s ease-out infinite;
+}
+
+#app > * {
+  width: 48%;
+  align-self: center;
+  background-color: orangered;
+  padding: 4rem 2rem 2rem;
+  border-radius: 100%;
+}
+
+#app > p {
+  animation: chameleon 8s ease-out infinite;
+}
+
+#app > img {
+  width: inherit;
+  animation: dizz 3.2s linear infinite;
+  opacity: .48;
+}
+
+#app > img:hover {
+  cursor: pointer;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes dizz {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;    
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Standard syntax */
+@keyframes dizz {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Standard syntax */
+@keyframes chameleon {
+  0% {
+    color: ivory;
+    background: rgb(55, 240, 18);
+  }
+
+  100% {
+    color: rgb(55, 240, 18);
+    background: ivory;
+  }
+}
+
