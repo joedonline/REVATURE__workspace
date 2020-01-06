@@ -77,3 +77,17 @@
   * `null` - isn't there / doesn't exist
   * `undefined` - not defined
   * `symbol`
+
+<br>
+
+---
+## Equality in JS
+- `==` - compares value, coerces type, NEVER USE
+- `===` - compares value & type, ALWAYS USE
+
+<br>
+
+---
+## Truthy and Falsy Values
+- **Truthy:** Non-boolean types can be evaluated to `true`
+- **Falsy:** Non-boolean types can be evaluated to `false`
