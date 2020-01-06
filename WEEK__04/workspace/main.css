@@ -1,0 +1,56 @@
+/* Bootstrap overrides */
+.jumbotron {
+  background-image: url(https://picsum.photos/id/1060/1200/1500);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron .container h1,
+.jumbotron .container p {
+  color: ivory;
+}
+
+.container > .row h2 {
+  text-transform: capitalize;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: ivory;
+}
+
+/* ELEMENT STYLES */
+article {
+  margin-bottom: 4em;
+}
+
+/* CUSTOM STYLES */
+.my-page-section {
+  padding: 8rem 0;
+}
+
+.my-logo {
+  border-radius: .5em;
+  border: 4px solid ivory;
+}
