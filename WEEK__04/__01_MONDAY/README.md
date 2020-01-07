@@ -91,3 +91,56 @@
 ## Truthy and Falsy Values
 - **Truthy:** Non-boolean types can be evaluated to `true`
 - **Falsy:** Non-boolean types can be evaluated to `false`
+
+<br>
+
+---
+## Terms
+- string interpolation --> ` ${...} ` (backticks)
+- arrow functions --> `() => return n`;
+- `function numFunc() { ... }`
+- anonymous functions --> `function() {...}`
+- **arrow functions use the `this` keyword differently
+
+<br>
+
+---
+## Scopes (ES6)
+- #### 3 Scopes in JS
+  * **global:** defined everywhere (on window in JS)
+  * **function:** defined inside a function, including parameters
+  * **block:** defined inside a block `{...}`
+
+<br>
+
+- #### `let`, `const`, `var`
+  * `var` - only uses `global` and `function` scopes
+  * `let` & `const` - allows all 3 scopes
+    - `const` - immutable, should be your default declaration
+
+      ```
+      const x = 3; // best for immutability
+      let x = 3; // when values would need to change
+      var x = 3; // never use
+      ```
+
+<br>
+
+---
+## DOM - Document Object Model
+- Exist in memory in your browser
+- Created by the browser through `html`
+- Changes to the DOM will reflect on the webpage (they'll change the document the user actually sees)
+- We can manipulate the DOM in JavaScript to create dynamic web pages
+- The DOM is a special object "document" in browser JS
+- The DOM has a tree structure, with elements as nodes
+- We use methods on document to navigate the DOM and methods/fields on elements to manipulate the DOM
+
+<br>
+
+---
+## Events & Listeners
+- Events are objects in JS that represent some *user interaction* (or other occurence)
+- We set up event listeners that wait for events and run a **callback function** when the event occurs
+- We can set up event listeners on any element in the DOM with 
+  `myElement.addEventListeners( event, callback );`
