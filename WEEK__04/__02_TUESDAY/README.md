@@ -98,3 +98,23 @@
 - `300s` -- redirects
 - `400s` -- client errors
 - `500s` -- server errors
+
+<br>
+
+---
+## Quick HTTP Requests
+- Sent from client to server
+- Have header and body
+- Request line has destination (URI)
+- Method (`GET`, `POST`)
+
+<br>
+
+### Basic Methods
+- `GET` -- gets a resource, i.e. html, json, etc. -- typically doesn't have anything in the body
+- `POST` -- send a resource like json string to the server -- typically has a body containing resource
+
+---
+## AJAX: Asynchronous JavaScript and XML
+- Most basic/fundamental way to send and receive HTTP in browser JS
+- **Asynchronous:** means it functions separately from synchronous, regular program flow
