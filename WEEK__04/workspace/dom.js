@@ -1,14 +1,18 @@
-'use strict'
+'use strict';
 
-const fruitButton = document.getElementById("fruitButton");
-const btnAppleContent = document.getElementById("appleContent");
+const populateColumns = textContent => {
+  const putFetchResultsHere = document.getElementById('putFetchResultsHere');
 
-const popUpMessage = evt => {
-  
+  const article = document.createElement('article');
+  article.classList.add('col-md-6');
+  console.log('ARTICLE', article);
+
+  const h2 = document.createElement('h2');
+  h2.textContent = textContent;
+  console.log('ARTICLE TITLE', h2);
+
+  article.appendChild(h2);
+
+  putFetchResultsHere.appendChild(article);
+  return putFetchResultsHere;
 };
-
-fruitButton.addEventListener('click', popUpMessage);
-
-const button1 = document.getElementById("button1");
-const button2 = document.getElementById("button2");
-const button3 = document.getElementById("button3");

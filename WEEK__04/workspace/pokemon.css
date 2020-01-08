@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bootstrap override */
+.container {
+  padding: 0;
+}
+
+#spriteDisplay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 0;
+}
+
+#buttons {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#scrollLeft,
+#scrollRight {
+  height: 25vh;
+}
