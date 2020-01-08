@@ -11,12 +11,12 @@
 
 #spriteDisplay {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 25vh;
+}
+
+#carouselPokemonInner {
+  background: black;
   width: 100vw;
-  position: fixed;
-  z-index: 0;
+  height: 100vh;
 }
 
 #buttons {
@@ -30,4 +30,17 @@
 #scrollLeft,
 #scrollRight {
   height: 25vh;
+}
+
+.carousel-item .active > img {
+  border: 1px solid red;
+}
+
+/* My Styles */
+.spriteContainerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
 }
