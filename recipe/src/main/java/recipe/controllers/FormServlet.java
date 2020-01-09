@@ -18,7 +18,8 @@ public class FormServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Reached POST FormServlet");
+		System.out.println("Received " + req.getMethod() + " at " + req.getRequestURI());
+		
 		String name = req.getParameter("name");
 		String directions = req.getParameter("directions");
 		Integer serves = null;
@@ -34,6 +35,12 @@ public class FormServlet extends HttpServlet {
 		
 		System.out.println(recipe);
 		resp.getWriter().write("Recipe: " + recipe);
+		
+		/*
+		 * Sending to DB
+		 */
+		//recipeService.save(recipe);
+		//recipeDao.save(recipe);
 	}
 	
 }
