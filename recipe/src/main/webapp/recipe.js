@@ -28,6 +28,6 @@ const sendRecipe = async () => {
   console.log(recipe);
 
   let response = await fetch(recipeUri, { method: 'POST', body: JSON.stringify(recipe) });
-  console.log(response);
+  console.log('[response]', response.body);
   
 }

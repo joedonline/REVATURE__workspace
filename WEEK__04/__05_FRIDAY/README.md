@@ -5,4 +5,5 @@
 ## Friday, Jan. 10th 2020
 
 ---
-# TITLE
+## Cross-origin stuff
+- [REFERENCE @ Apache Tomcat](https://tomcat.apache.org/tomcat-7.0-doc/config/filter.html)
