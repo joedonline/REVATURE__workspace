@@ -139,6 +139,43 @@
   * Bubbling is **default**, in general don't change
   * Events continue propagating regardless of listeners, unless we call `event.stopPropagation()` -- avoid this.
 
+<br>
+
+## Event Propagation
+- #### `addEventListener(name, callback, propagation)`
+  * name ==> `click | mouseenter | mouseleave |` etc.
+  * callback ==> functional implementation
+  * propagation ==> `true | false`
+    - determines the order in which the event is tracked through the DOM
+    - `false` ==> Bubbling (bottom to top)
+    - `true` ==> Capturing (top to bottom)
+  * `stopPropagation()` ==> if an `outerEventHandler()` is set on an outer container element, `stopPropagation()` can ensure that `outerEventHandler()` never happens
+
+<br>
+
+**Example**
+
+```
+var box = document.querySelector('.boxes');
+var special = document.querySelector('#special);
+
+boxes.addEventListener('click', function(e) {
+  console.log('other');
+  if (e.target.className === 'box') {
+    e.target.parentNode.removeChild(e.target);
+  }
+}, false); // event 'propagation' is set to false, most of the time (Bubbling propagation)
+
+
+special.addEventListener('click', function(e) {
+  console.log(e);
+  e.target.style = 'background-color: #6d73c2;';
+  e.stopPropagation();
+}, true); // set to true, hence a top-to-bottom (Capturing propagation)
+```
+
+<br><br>
+
   ---
   ## Closures
   - How we do encapsulation in functional languages (JS included)
@@ -153,3 +190,18 @@
   *** **in other words** a function that returns a function
 
 <br>
+
+---
+## What does `'use strict'` do?
+- [REFERENCE - w3schools](https://www.w3schools.com/js/js_strict.asp)
+- sloppy: weak-typed
+- `'use strict'`: slightly more strongly-typed
+
+<br>
+
+**Example**
+- "use strict" vs. sloppy
+  * sloppy ==> allows you to create variables without using `var`, `let`, `const`
+  * `'use strict'` ==> ensures you are declaring variables using `var`, `let`, or `const`
+
+<br><br>
