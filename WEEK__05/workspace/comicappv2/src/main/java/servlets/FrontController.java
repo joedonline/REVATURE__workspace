@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import dao.ComicDaoPostgres;
+import exceptions.ComicException;
 import models.Comic;
 import services.ComicService;
 
@@ -37,6 +38,7 @@ public class FrontController extends HttpServlet {
 		
 		// this gives you /comic endpoint for the front end to send requests to
 		if (tokens[3].equals("comics")) {
+			
 			if (tokens.length > 4) {
 				Integer id = Integer.valueOf(tokens[4]);
 				Comic comic = comicService.get(id);
@@ -65,7 +67,15 @@ public class FrontController extends HttpServlet {
 		case "comics" : 
 			Comic receivedComic = om.readValue(req.getReader(), Comic.class);
 			System.out.println("[receivedComic] " + receivedComic);
-			comicService.save(receivedComic);
+			
+			try {
+				comicService.save(receivedComic);
+			} catch(ComicException e) {
+				resp.setStatus(400);
+				resp.getWriter().write(om.writeValueAsString(e));
+				//resp.sendError(400, "Failed to save comic");
+			}
+			
 			break;
 		}
 	}
