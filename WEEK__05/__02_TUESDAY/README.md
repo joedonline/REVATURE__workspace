@@ -38,7 +38,7 @@
   * Sprint
   * Backlog
   * Burn-down Chart
-  * Project Owner
+  * Product Owner
   * Scrum Master
   * Standup
   * User Stories
@@ -95,3 +95,95 @@
 - Good when iteration, experimentation and occasional failure are acceptable
 - This is true on the web almost all the time
 - **Scrum** is an implementation of Agile
+
+<br><br>
+
+---
+## Modern Web Development
+
+<br>
+
+### Dev process & tools needs to solve these problems
+1. Big teams
+1. Big projects
+1. It must work on **all** platforms
+    * OS, browsers, etc.
+1. A lot of dependencies to work with
+
+<br>
+
+### Tooling
+- TypeScript: JavaScript w/ static-typing
+- (1), (2)
+- Must be transpiled to JS to run
+- TS is a superset of JS
+
+<br>
+
+### Babel
+- (3)
+- Converts ES6+ JS code to ES5 for compatibility
+
+<br>
+
+### Webpack
+- (2), (3), (4)
+- Minifies files and collapses dependencies
+- Ideally entire js part of project ends up in `bundle.js`
+- Minify the short version and remove white space 
+- Collapse dependencies: reduces the number of files
+
+<br>
+
+### NPM: Node Package Manager
+- (2), (4)
+- install and manage dependencies
+
+<br>
+
+### Angular
+- (1), (2), (3), (4)
+- Front-end framework
+- Makes modern web development easy
+- includes all tooling to the left
+- Everything just works provided we follow - "The Angular Way" (withing framework, we follow their rules even if we don't like them)
+
+<br>
+
+### Angular Benefits
+- Modularity / DRY (Don't Repeat Yourself)
+- Angular components can be reused across your site
+- Functionality that needs to occur in multiple parts of the site can be shared via **services**
+
+<br>
+
+### SPA: Single Page Application
+- Angular projects never navigate away from the initial `index.html` -- only the content changes
+- Faster, looks better
+- Only reload parts of the page that must change
+
+<br>
+
+### Support
+- Angular was originally build by Google
+- There is ongoing support
+- Documentation and tutorials on [Angular.io](https://angular.io)
+  * Tour of Heroes
+  * Reference Docs
+
+<br><br>
+
+### Angular Basics
+- #### Components
+  * parts of a webpage
+  * reusable
+  * can be parameterized
+  * consist of an HTML template, styling in CSS, and a `class` in a TypeScript file
+  * Angular projects/sites are built of many nested components
+- #### Services
+  * Shared functionality and state across components
+  * Consist of a `class` and a `.ts` file
+  * Example: Use a Service to send HTTP, or state global logged-in user state in a service
+
+### Routing
+- Display different components based on URL without ever redirecting
