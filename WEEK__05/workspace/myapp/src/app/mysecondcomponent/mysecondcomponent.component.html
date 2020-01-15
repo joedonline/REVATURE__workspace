@@ -1,0 +1,19 @@
+<div class="classic_div">
+  <h3>Header</h3>
+  <ol>
+    <li>We can do</li>
+    <li>All our classic HTML</li>
+    <li>Inside of component templates</li>
+    <li>evaluated typescript {{ 5*4*3*2*1 }}</li>
+    <li>evaluated typescript: {{ myString }}</li>
+  </ol>
+
+  <!-- EVENT BINDING IN ANGULAR -->
+  <div class="myRow">
+    <button (click)="incrementNumber()">Click me!</button>
+    <p>current value of x: {{ x }}</p>
+  </div>
+  <div class="myRow">
+    <button (click)="log('hello i am from the DOM')">Click me 2</button>
+  </div>
+</div>

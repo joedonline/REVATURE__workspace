@@ -1,0 +1,19 @@
+.anotherComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__innerArea {
+    background: aqua;
+    padding: 2em 8em;
+    border-radius: .5em;
+    transition: all .16s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: yellow;
+    }
+  }
+
+}
