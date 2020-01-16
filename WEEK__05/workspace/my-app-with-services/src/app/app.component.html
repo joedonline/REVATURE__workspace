@@ -1,0 +1,29 @@
+<div>
+  <!-- @Input example -->
+  <h3>Manually created child elements</h3>
+  <app-child-example [message]="'Hi from parent'"></app-child-example>
+  <app-child-example [message]="messages[0]"></app-child-example>
+  <app-child-example [message]="messages[1]"></app-child-example>
+  <app-child-example [message]="messages[2]"></app-child-example>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3>Child elements create with <code>*ngFor</code></h3>
+<ul>
+  <li *ngFor="let item of messages">
+    <app-child-example [message]="item" (myOutput)="logOutput($event)"></app-child-example>
+  </li>
+</ul>
+
+<br>
+<br>
+<br>
+
+<app-square-one></app-square-one>
+<app-square-two></app-square-two>
+<div>
+  <app-bootstrap-tester></app-bootstrap-tester>
+</div>

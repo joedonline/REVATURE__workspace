@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+
+<hr>
+
+<p>bootstrap-tester works!</p>
+
+<label>
+  Classes go here:
+  <input type="text">
+  <input type="text" [(ngModel)]="classesToTest1">
+  <input type="text" [(ngModel)]="classesToTest2">
+</label>
+
+<br>
+
+<!-- ATTRIBUTE BINDING -->
+<div [class]="classesToTest1">
+  <span>This div is used for testing Bootstrap styles</span>
+</div>
+
+<br><br>
+
+<div [class]="classesToTest2">
+  <span>This div is used for testing Bootstrap styles</span>
+</div>
+
+<br><br>
+
+<hr>
+<span>diagnostic: {{ classesToTest1 | json }}</span><br>
+<span>diagnostic: {{ classesToTest2 | json }}</span>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="card-footer text-muted">
+  <span>BOOTSTRAP TESTER | 2020</span>
+</footer>
