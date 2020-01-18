@@ -86,6 +86,7 @@
 - `ng new --routing --skip-tests myproject`
 - `ng generate component name-of-component`
 - `ng generate service name-of-service`
+- `ng generate class Comic`
 
 <br><br>
 
