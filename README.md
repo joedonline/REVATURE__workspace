@@ -36,6 +36,10 @@
 ### [WEEK 05 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__05)
 
 ---
+### [WEEK 06 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__06)
+### [WEEK 06 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__06)
+
+---
 ### [WEEK nn ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__nn)
 ### [WEEK nn ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__nn)
 
