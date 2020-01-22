@@ -23,7 +23,7 @@
 | `printenv` | Display a list of environment variables |
 | `printenv | less` | Display a list of environment variables, one page at a time |
 | `printenv | more` | Display a list of environment variables, one page at a time; displays "More" at bottom of screen |
-| `yum` | An interactive, rpm based, package manager. |
+| `yum` | (Yellowdog Updater Modified) An interactive, rpm based, package manager. |
 
 <br>
 
@@ -46,7 +46,7 @@
 <br>
 
 ---
-## EC2 - Elastic Cloud Compute
+## EC2 - Elastic Compute Cloud
 - A server you control in the cloud
 - Amazon provides a VM with dedicated resources not a very *tiny* actual computer
 - The resources used can expand and contract based on need, thus "Elastic".
