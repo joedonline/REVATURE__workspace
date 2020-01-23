@@ -24,6 +24,7 @@
 | `printenv | less` | Display a list of environment variables, one page at a time |
 | `printenv | more` | Display a list of environment variables, one page at a time; displays "More" at bottom of screen |
 | `yum` | (Yellowdog Updater Modified) An interactive, rpm based, package manager. |
+| `grep` | Globally Search for Regular Expression and Print Out. ( [REFERENCE: geeksforgeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) ) |
 
 <br>
 
