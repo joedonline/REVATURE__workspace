@@ -4,8 +4,8 @@
 # WEEK 06
 
 ---
-#### [MONDAY`github`](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__06/__06_WEEKDAY)
-#### [MONDAY`delta`](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__06/__06_WEEKDAY)
+#### [MONDAY`github`](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__06/__06_MONDAY)
+#### [MONDAY`delta`](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__06/__06_MONDAY)
 
 ---
 #### [WEDNESDAY`github`](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__03/__03_WEDNESDAY)
