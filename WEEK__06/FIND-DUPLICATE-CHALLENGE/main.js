@@ -53,51 +53,50 @@ function returnFirstDuplicate(collection) {
 console.log(returnFirstDuplicate(arr));
 
 
-
-
+/*****************/
+const collection = [];
 
 // // BRUTE FORCE SOLUTION, using array
-// const collection = [];
-// function has(it) {
-//   for (let element of collection) {
-//     if (it === element) {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
-//
-// for (let i = 0; i < arr.length; i++) {
-//   if (has(arr[i])) {
-//     console.log(arr[i]);
-//   } else {
-//     collection.push(arr[i]);
-//   }
-// }
+function has(it) {
+  for (let element of collection) {
+    if (it === element) {
+      return true;
+    }
+  }
+  return false;
+}
+
+for (let i = 0; i < arr.length; i++) {
+  if (has(arr[i])) {
+    console.log(arr[i]);
+  } else {
+    collection.push(arr[i]);
+  }
+}
 
 
 // "ONE PASS" SOLUTION, using array
-// const collection = [];
-// arr.forEach( item => {
-//
-//   if (collection.includes(item)) {
-//     console.log(item);
-//   } else {
-//     collection.push(item);
-//   }
-//
-// });
+const collection = [];
+arr.forEach( item => {
+
+  if (collection.includes(item)) {
+    console.log(item);
+  } else {
+    collection.push(item);
+  }
+
+});
 
 
 // "ONE PASS" SOLUTION, using Set
-// const collection = new Set();
-//
-// arr.forEach( item => {
-//
-//   if (collection.has(item)) {
-//     console.log(item);
-//   } else {
-//     collection.add(item);
-//   }
-//
-// });
+const collection = new Set();
+
+arr.forEach( item => {
+
+  if (collection.has(item)) {
+    console.log(item);
+  } else {
+    collection.add(item);
+  }
+
+});
