@@ -158,4 +158,36 @@ public class HelloWorldExample {
 ---
 ## 4. CRUD Operations
 
-### Add objects
+![CRUD Operation: Update](crup_op_update.png)
+
+<br>
+
+![update_object](update_object.png)
+
+<br>
+
+![Delete object](delete_object.png)
+
+<br><br>
+
+---
+## 5. Searches and Queries
+
+### Hibernate Query Language (HQL)
+- an OO version of SQL
+- adds layer of abstraction for the programmer
+
+<br>
+
+### Select clause
+
+![From employees](select_from_employees.png)
+
+<br>
+
+![From employees](select_from_employees2.png)
+<br>
+
+![From employees complete](select_from_employees_complete.png)
+
+<br><br>
