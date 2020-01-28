@@ -18,6 +18,13 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -38,6 +45,8 @@
 			<artifactId>spring-context</artifactId>
 			<version>4.3.26.RELEASE</version>
 		</dependency>
+
+
 
 		<dependency>
 			<groupId>junit</groupId>
