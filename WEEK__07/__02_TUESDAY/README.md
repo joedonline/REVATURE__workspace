@@ -7,9 +7,10 @@
 ---
 ## Spring Framework
 
+- ###### [Spring Website](https://spring.io/)
 - ###### [REFERENCE: Slides](Intro_Spring_Framework.pdf)
 
-<br>
+<br><br>
 
 ![Spring Diagram](Spring-Diagram.png)
 
@@ -170,3 +171,19 @@ Custom destroy method **&rarr;** dereferrence Bean when it passes out of scope
 - **We can specify custom functionality:**
   * Implement InitializingBean / DisposableBean
   * Specify methods in XML
+
+<br><br>
+
+### STEPS TO GET STARTED WITH Spring
+- Create Maven project
+- Install dependencies
+  * mvnrepository.com &rarr; get `spring-core` xml dependency code snippet
+  * mvnrepository.com &rarr; get `spring-beans`
+  * mvnrepository.com &rarr; get `spring-context`
+- Update `POM.xml` source and target properties
+  * `<maven.compiler.source>1.8</maven.compiler.source>`
+  * `<maven.compiler.target>1.8</maven.compiler.target>`
+
+<br><br>
+
+---
