@@ -153,12 +153,12 @@ Custom destroy method **&rarr;** dereferrence Bean when it passes out of scope
 | `BeanFactoryAware.setBeanFactory()` | ApplicationContext |
 | `ApplicationContextAware.setApplicationContext()` | ApplicationContext |
 | `BeanPostProcessor` pre-initialization | ApplicationContext |
-| `InitializingBean.afterPropertiesSet()` (we can specify custom functionality here) | ApplicationContext |
-| Custom init method or methods (we can specify custom functionality here) | ApplicationContext |
+| `InitializingBean.afterPropertiesSet()` <br> <small>(we can specify custom functionality here)</small> | ApplicationContext |
+| Custom init method or methods <br> <small>(we can specify custom functionality here)</small> | ApplicationContext |
 | `BeanPostProcessor` Post initialization | ApplicationContext |
 | Bean is ready for use! |  |
-| `DisposableBean.destroy()` (we can specify custom functionality here) |  |
-| Custom destroy method or methods (we can specify custom functionality here) |  |
+| `DisposableBean.destroy()` <br> <small>(we can specify custom functionality here)</small> |  |
+| Custom destroy method or methods <br> <small>(we can specify custom functionality here)</small> |  |
 
 <br>
 
