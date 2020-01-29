@@ -5,12 +5,20 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.books.models.Genre;
 
+@Repository
+@Transactional
+@EnableTransactionManagement
 public class GenreDaoImpl {
 
-	private SessionFactory sf; 
+	@Autowired
+	private SessionFactory sf;
 	
 	public GenreDaoImpl(SessionFactory sf) {
 		this.sf = sf;
@@ -18,12 +26,10 @@ public class GenreDaoImpl {
 	
 	public List<Genre> getAllGenres() {
 		Session session = sf.getCurrentSession();
-		session.beginTransaction();
 		
 		Criteria c = session.createCriteria(Genre.class);
 		List<Genre> genres = c.list();
 		
-		session.getTransaction().commit();
 		return genres;
 	}
 	

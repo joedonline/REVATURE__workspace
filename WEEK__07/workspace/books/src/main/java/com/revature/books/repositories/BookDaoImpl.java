@@ -5,9 +5,15 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.books.models.Book;
 
+@Repository
+@Transactional
+@EnableTransactionManagement
 public class BookDaoImpl {
 
 	private SessionFactory sf;
