@@ -109,4 +109,51 @@ public class HelloSpringApp {
 </beans>
 ```
 
+<br><br>
+
+---
+## Dependency Injection
+
+- ### The Dependency Inversion principle
+  * The client delegates calls to another object the responsibility of providing its dependencies.
+
+<br>
+
+![Car Factory](car_factory.png)
+
+<br>
+
+![Spring container, coach factory](spring_container_coach_factory.png)
+
+<br>
+
+- ### Injection Types
+  * There are many types of injection with Spring
+  * The two most common are:
+    - **Constructor Injection**
+    - **Setter Injection**
+
+<br>
+
+- ### Development Process: Constructor Injection
+  1. Define the dependency interface and class
+  2. Create a constructor in your class for injections
+  3. Configure the dependency injection in Spring config file
+
+<br>
+
+![Step 1: Define Dependency Interface and Class](step_1_define_dependencies.png)
+
+<br>
+
+![Step 2: Create a Constructor for Injection](step_2_create_a_constructor_for_injection.png)
+
+<br>
+
+![Step 3: Configure Dependency Injection in config file](step_3_configure_dependency_injection.png)
+
+<br>
+
+![How Spring Processes your Config File](how_spring_processes_your_config_file.png)
+
 <br>
