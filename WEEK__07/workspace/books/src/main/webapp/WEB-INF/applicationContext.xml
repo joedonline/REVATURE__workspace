@@ -4,15 +4,20 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 	<!-- Scan for Spring beans -->
 	<context:component-scan
 		base-package="com.revature">
-		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 
 	<!-- Hibernate Config Goes Here -->
@@ -21,7 +26,7 @@
 		<property name="driverClassName"
 			value="org.postgresql.Driver" />
 		<property name="url"
-			value="" />
+			value="jdbc:postgresql://database-1.c32anyjmqflo.us-east-1.rds.amazonaws.com/books" />
 		<property name="username" value="postgres" />
 		<property name="password" value="wasspord" />
 	</bean>
