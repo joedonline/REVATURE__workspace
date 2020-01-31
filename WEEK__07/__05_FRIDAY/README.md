@@ -67,4 +67,25 @@
       }
       ```
 
+<br><br>
+
+---
+## ng bootstrap
+- [REFERENCE, website](https://ng-bootstrap.github.io/#/home)
+
+<br>
+
+---
+## ng material ui
+- [REFERENCE, website](https://material.angular.io/)
+
+<br><br>
+
+---
+# Setting Up a Pipeline, DevOps
+
+<br>
+
+### [EC2 - Jenkins - DevOps: README.md](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__07/EC2_Jenkins_DevOps/)
+
 <br>
