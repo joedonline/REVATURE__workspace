@@ -5,4 +5,66 @@
 ## Friday, Jan. 31st 2020
 
 ---
-# TITLE
+# Spring Boot
+- [REFERENCE, website](https://spring.io/projects/spring-boot)
+- Makes creating Spring projects a lot easier
+
+<br>
+
+## `SpringInitializr`
+- [REFERENCE, website](https://start.spring.io/)
+
+<br>
+
+#### Other settings
+- mostly default
+
+<br>
+
+#### Dependencies
+- Spring Web
+- SB Actuator
+- Spring Data JPA
+- H2 Database
+
+<br>
+
+### Why am I getting Unknown error in line 1 if pom.xml?
+- [Stack Overflow reference](https://stackoverflow.com/questions/56142369/why-am-i-getting-unknown-error-in-line-1-of-pom-xml)
+
+---
+## Local Spring Boot installation (appuser)
+
+- #### `src/main/resources/`
+  * `application.properties`
+
+    ```
+    server.port=9999
+
+    #Actuator setting to see management info
+    management.endpoints.web.exposure.include=*
+    ```
+<br>
+
+- #### `src/main/java`
+  * `com.revature.appuser`
+    - `HelloController.java`
+
+      ```
+      package com.revature.appuser;
+
+      import org.springframework.web.bind.annotation.GetMapping;
+      import org.springframework.web.bind.annotation.RestController;
+
+      @RestController
+      public class HelloController {
+
+        @GetMapping("/v2/hello")
+        public String helloWorld() {
+          return "Hi from Spring Boot!";
+        }
+        
+      }
+      ```
+
+<br>
