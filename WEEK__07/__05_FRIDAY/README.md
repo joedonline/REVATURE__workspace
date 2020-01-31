@@ -88,4 +88,7 @@
 
 ### [EC2 - Jenkins - DevOps: README.md](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__07/EC2_Jenkins_DevOps/)
 
-<br>
+- [REFERENCE: NodeJS plugin](https://medium.com/@gustavo.guss/jenkins-starting-with-pipeline-doing-a-node-js-test-72c6057b67d4)
+
+<br><br>
+ 
