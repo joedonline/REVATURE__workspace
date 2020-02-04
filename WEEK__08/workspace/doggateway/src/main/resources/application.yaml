@@ -1,0 +1,26 @@
+#in properties:
+#server.port=8080
+
+#in yaml:
+server:
+  port: 8080
+
+#in yaml, whitespace matters!
+
+#spring.application.name=doggateway
+spring:
+  application:
+    name: doggateway
+zuul:
+  routes:
+    #in here, we name our routes
+    # and provide a path, then uri/service id
+    eureka:
+      path: /eureka/**
+      url: http://localhost:8761
+    dogs:
+      path: /dog/**
+      service-id: appdog
+    discover:
+      path: /discover/**
+      service-id: dogdiscover

@@ -51,9 +51,114 @@
 
 ---
 ## Benefits of MSA vs. Monoliths
+- **Loosely coupled Services**
+  <br>
+  
+- **(Enforced) modularity**
+  <br>
+  
+- **Fault-tolerant**
+  * no Single Point of Failure 
+    <br>
+    
+- **Scalable**
+  * Independent services scale independently 
+    <br>
+    
+- **Implementation agnostic**
+  * services can use different tech / languages 
+    <br>
+    
+- **Testable**
+  <br>
+  
+- **Organizational benefit**
+  * small teams working independently managing separate services     
 
-<br>
+<br><br>
 
 ## Drawbacks of MSA
+- `(1)` **NETWORK LATENCY!!!**
+  * "Chatty" microservices communicating too often
+  <br><br>
 
+- `(2)` **Distributed data storage**
+  * we make tradeoffs and settle for eventual consistency
+  <br><br>
+
+- `(3)` **Monitoring and Logging**
+  * are more difficult over a network
+  <br><br>
+
+- `(4)` **Deploying 100s of services**
+  * can be difficult
+  <br><br>
+
+- `(5)` **Complexity/Refactoring**
+  * changes in few services are easier
+  * changes across many are harder
+
+<br><br>
+
+## Solutions / Mitigations of Drawbacks
+- **For `(1)` -- Combine microservices that constantly communicate**
+  * If they are too "chatty", combine them
+    <br><br>
+
+- **For `(1)` -- HTTP can be replaced by messaging queues where appropriate** *(using Publisher/Subscriber pattern)*
+  * (Rabbit & Kafka MQs)
+    <br><br>
+
+- **For `(2)` -- Many ways to mitigate**
+  * shard
+  * dbs
+  * use stored caches (Redis)
+  * etc.
+    <br><br>
+
+- **For `(3)` -- Distributed logging and tracing tools**
+  * Spring Cloud Sleuth
+  * Zipkin
+    <br><br>
+
+- **For `(4)`**
+  * Docker for containerization
+  * Kubernetes for "container orchestration"
+  * Cloud providers for hardware
+    <br><br>
+
+<br><br>
+
+---
+# Netflix OSS MSA Tools
 <br>
+
+### Eureka Server:
+- Service Registry
+<br><br>
+
+### Eureka Client:
+- Discovery Client
+  * (registers with Eureka Server)
+<br><br>
+
+### Ribbon:
+- Load Balancer
+<br><br>
+
+### Zuul:
+- Gateway
+<br><br>
+
+### Feign:
+- HTTP Client
+  * (sends HTTP requests)
+<br><br><br>
+
+## Our Services
+
+#### `dogdiscover`
+#### `doggateway`
+#### `dogeureka`
+#### `doggetter`
+#### `appdog` (2 instances)
