@@ -12,3 +12,48 @@
 - [REFERENCE - Source Book, see question 4](https://www.opengroup.org/soa/source-book/msawp/p3.htm)
 - [REFERENCE - Microservices - Martin Fowler](https://martinfowler.com/articles/microservices.html)
 - [REFERENCE - Martin Fowler](https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html)
+
+<br><br>
+
+---
+## Service Oriented Architecture
+- #### Services
+  * are programs that run independently, communicate over a network, and achieve some business logic.<br><br>
+- #### SOA
+  * is designing your application to function as a collection of services.<br><br>
+
+<br>
+
+---
+# MSA: MicroServices Architecture
+- is a *subset* of SOA, where services must satisfy more conditions
+- **Microservices**
+  * MUST follow <u>Single Responsibility Principle</u>
+  * **cannot** be composed of other services
+  * must achieve **scalability** and **resilience** through independence
+
+<br><br>
+
+---
+## "Typical" Enterprise SOA vs. MSA
+
+| Larger Services | Smaller Services (SRP) |
+|-|-|
+| Communicates with SOAP | Communicate with RESTful |
+| &nbsp; &rarr; Communicate with rigid rules: each service's API follows a contract (the WSDL file) | &nbsp; &rarr; HTTP: |
+| "Smart pipes" <br> (will come back here) | &nbsp;&nbsp;&nbsp; * RESTfull APIs act on HTTP verbs |
+| Typically use a "Message Bus" to manage communication between services--every message is routed through the bus | &nbsp;&nbsp;&nbsp; * respond with Status codes |
+|  | &nbsp;&nbsp;&nbsp; * JSON in body of req/resp |
+|  | "Smart endpoints", "dumb pipes" <br> (will come back here) |
+|  | Typically uses Service registry and discovery to enable direct communication |
+
+<br><br>
+
+---
+## Benefits of MSA vs. Monoliths
+
+<br>
+
+## Drawbacks of MSA
+
+<br>
