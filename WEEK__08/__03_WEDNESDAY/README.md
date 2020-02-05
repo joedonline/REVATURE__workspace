@@ -131,7 +131,7 @@
 
 <br><br>
 
-## [Docker Notes Markdown](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08)
+## [Docker Notes Markdown](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08/notes.md)
 
 <br><br>
 
