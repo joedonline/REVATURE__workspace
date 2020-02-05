@@ -83,6 +83,12 @@
 <br><br><br>
 
 ## Richardson Maturity Model
+  <br>
+
+  ![Glory of REST](https://martinfowler.com/articles/images/richardsonMaturityModel/overview.png)
+
+  <br>
+
 - A way to "approach" REST
 - Goes from "Level 0" (Remote Procedure Calls) to "Level 3" (HATEOAS)
 - REST itself is beyond Level 3
@@ -90,3 +96,42 @@
   * [Martin Fowler website](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 <br><br><br>
+
+---
+## Docker
+- Wildly popular tool for DevOps/Deployment
+- The <u>Docker Daemon</u>
+  * runs on your machine
+  * enables building **Docker Images** and running **Docker Containers**
+
+<br>
+
+### Use Docker to:
+- Deploy your app in a Container, and that containerized application will run exactly the same anywhere Docker runs
+- Ensures OS and Environment are consistent across deployments
+
+<br>
+
+### Docker Containers
+- Similar to VMs, but much more lightweight
+- Just a running process with added encapsulation features
+- Containers share the OS kernel with the Host OS and share read-only files among each other, using far fewer resources than VMs
+- Containers are started up from images
+  * Command: `docker container run <my_image>`
+
+<br>
+
+### Docker Images
+- Similar to VM Images, but built in shareable layers
+- The <u>Image</u> includes everything it needs to run, including:
+  * OS environment
+  * applications
+  * etc.
+- **Docker** provides Git-like functionality for Images, letting us version-control them
+- **DockerHub** provides GitHub-like functionality for images, letting us store Images in a remote repository
+- **Docker Images** we build from a Dockerfile and a Build Context (existing directory our machine)
+
+<br><br>
+
+- [hub.docker.com/_/openjdk](https://hub.docker.com/_/openjdk)
+- [Best Practices for Writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
