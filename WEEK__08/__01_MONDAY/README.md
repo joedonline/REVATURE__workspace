@@ -133,5 +133,9 @@
 
 <br><br>
 
+## [Docker Notes Markdown](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08)
+
+<br><br>
+
 - [hub.docker.com/_/openjdk](https://hub.docker.com/_/openjdk)
 - [Best Practices for Writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
