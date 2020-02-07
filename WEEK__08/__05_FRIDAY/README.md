@@ -88,3 +88,7 @@ Envelope              : Entire message
 - [REFERENCE](https://spring.io/guides/gs/producing-web-service/)
 
 <br><br>
+
+---
+# [REVIEW QUESTIONS](https://github.com/1912december19java/training-code/blob/master/week8/review_questions.md)
+---
