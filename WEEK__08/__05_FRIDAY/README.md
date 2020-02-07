@@ -81,3 +81,10 @@ Envelope              : Entire message
 ### JAXB: Java API for XML Binding
 - Like Jackson, but for XML
 - We use "**Marshalling**" and "**Unmarshalling**" to describe converting objects to/from XML
+
+<br>
+
+### Producing a SOAP web service
+- [REFERENCE](https://spring.io/guides/gs/producing-web-service/)
+
+<br><br>
