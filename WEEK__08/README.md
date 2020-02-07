@@ -20,7 +20,7 @@
 #### [THURSDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__08/__04_THURSDAY)
 
 ---
-#### [WEEKDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__nn/__nn_WEEKDAY)
-#### [WEEKDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__nn/__nn_WEEKDAY)
+#### [FRIDAY (`github`)](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08/__05_FRIDAY)
+#### [FRIDAY (`delta`)](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__08/__05_FRIDAY)
 
 ---
