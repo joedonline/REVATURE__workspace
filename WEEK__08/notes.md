@@ -15,7 +15,7 @@
   * See also Martin Fowler's "Service Oriented Ambiguity"
   * Services are programs that run independently, achieve some business logic, and communicate over a network
   * Service Oriented Architecture involves designing your app as a collection of these services working together
-
+  
 ## MSA - MicroServices Architecture
   * See Open Group's chapter on MSA
   * MSA is also a contentious subject, with multiple interpretations.
@@ -23,7 +23,7 @@
     * Microservices MUST satisfy the Single Responsiibility Principle (SRP) -- they do only one thing and do it well
     * Microservices cannot be composed of multiple other services
     * Microservices achieve scalability and resilience through independence (we can easily take down or spin up instances of each service)
-
+    
 ## Comparison of typical enterprise SOA and typical MSA
   * Enterprise SOA has larger services that may have more than one responsibility
   * MSA has smaller services that satisfy SRP
@@ -31,9 +31,9 @@
   * MSA communicates with HTTP and consists of RESTful services.  "Smart endpoints, dumb pipes"
   * Enterprise SOA routes communication through a central bus
   * MSA uses service registries and discovery clients to allow communcation without centralized routing
-
+  
 # MSA
-
+  
 ## Benefits of MSA (vs. Monolith)
   * Loosely coupled services
   * Modular
@@ -43,14 +43,14 @@
   * Testable : test each service independently
   * Good for development in a large org : many small autonomous (agile, devops-y) teams maintain RESTful microservices
     * This is how FANG (Facebook, Amazon, Netflix, Google) does most development
-
+  
 ## Drawbacks of MSA
   * *Network latency* and the "chattiness" of microservices
   * Distributed data storage means we make tradeoffs and settle for "eventual" consistent data
   * Monitoring and tracing errors is more difficult across a network
   * Deploying 100s of services can be difficult
   * Complexity/Refactoring : changes that touch one or two microservices are easier.  Changes that touch many microservices are much harder.
-
+  
 ## Solutions/Mitigations of drawbacks
   * Chattiness reduced by following SRP and separation of concerns
     * If 2 microservices are constantly talking, refactor them to follow SRP
@@ -59,7 +59,7 @@
   * Spring Cloud Sleuth and Zipkin enable distributed logging and tracing
   * Docker, Kubernetes/Docker Swarm, and cloud platforms enable easier MSA deployment
   * Complexity mitigated by good design (a constant goal)
-
+  
 ## Netflix OSS for Microservices
   * Eureka Server: Service Registry.  Microservices register their URI and status with Eureka.  Provides failover.
     * Enable by putting it on the classpath and using `@EnableEurekaServer`
@@ -76,7 +76,7 @@
   * Feign: Http Client.  Allows microservices to easily send HTTP requests to other microservices
     * Enable by putting OpenFeign on the classpath and using `@EnableFeignClients`
     * To actually create a Feign Client (something that sends HTTP reqs), annotate an interface with `@FeignClient` and use `@RequestMapping` annotations to specify what requests to send.
-
+  
 ## Spring Cloud MSA tools
   * Config server: provides centralized and version controlled configuration for microservices
     * Enable by putting it on the classpath, using `@EnableConfigServer`, and adding a git uri in application.properties
@@ -134,7 +134,7 @@
     * `<soap-env:Server>` - error with server
     * `<faultString>`
     * `<details>`
-
+    
 ## WSDL
   * Web Service Description Language
   * XML file describing everything about the service
@@ -158,7 +158,7 @@
     * operation – abstract description of action supported by service
     * binding – specify protocol and data format for operations and messages
     * service – specify port address(es) of binding
-
+    
 ## Jax-WS – Java API for XML Web Services
   * This is to set up service providers + consumers
   * Annotation-based
@@ -173,9 +173,9 @@
   * RPC – request body must contain operation name and method parameters
   * Literal: contents conform to user-defined xsd
   * Encoded: uses xsd datatypes but body doesn't need to conform to user-defined xsd
-
+  
 # REST
-
+  
 ## 6 traits of REST
   * Stateless
   * Cacheable
@@ -197,7 +197,7 @@
     * Session-based authentication – validate user before allowing request
     * No sensitive information in url (user name, password, id, etc)
     * Restrict Http verbs
-
+  
   ### Http Methods
   * Get, Post, Put, Delete, Head, Options, Connect, Trace
   * Know safe, idempotent, and cacheable methods.  See Wikipedia.
@@ -227,27 +227,27 @@
   * Runs natively on Linux and has added support for Windows and OSX.
   * A step beyond mvn package in consistent deployment because it ensures the OS and environment are consistent across deployments, in addition to managing dependencies.
    * Reminder: dependency management tools just find and download versioned dependencies on your system.  While useful, mvn package may work differently on different operating systems or with different environments.
-
+   
 ## Docker Container
  * A container is just a running process with an attached filesystem and additional encapsulation features.
  * Containers are similar to Virtual Machines, but much more lightweight.  Docker containers use the kernel of the Host OS and share read-only files between each other, so they use far fewer resources than similarly-configured VMs.
  * Containers allow us to deploy our apps in the same environment on many different machines -- each container has its own OS (minus kernel) and installed binaries and libraries (programs and resources).  We also set up the environment.
  * Unlike VMs, Containers don't have a set, provisioned amount of resources.  The resources used/available can change the same as they change for other processes.
  * Docker Containers are built from Docker Images
-
+ 
 ## Docker Image
  * A Docker image is a file that contains everything a container needs to run.
  * Images can include everything from the OS to specific applications, needed files, and environment variables
  * Docker provides versioning and git-like tools for images, so we can incrementally develop our images and track changes
  * Docker Hub provides GitHub-like functionality for images, and they provide many official images for users to build on.
  * Docker images are built from a Dockerfile in a Build Context.  The beginning of the Dockerfile should include a "FROM" where we specify the official image we're building on top of.  This will be the base layer of our image.
-
+ 
 ## Docker Image Layers
  * Images are built in read-only layers, so multiple docker containers that use the same layers can share resources
  * Each running Container has a read/write layer on top of the read-only image layers.  All the writing your running application does occurs in this top layer
  * Any files from the read-only layers that are changed are first copied to the read/write layer in that container.  We call this "Copy-On-Write"
  * When we build an image from a Dockerfile, new layers are produced with ADD, COPY, and RUN
-
+ 
  ## Docker Network
  * The docker daemon, by default, maintains all the running containers on a network on your computer.  We call this the **host** network type
  * We can also configure Docker to use a **distributed** network, making use of docker containers across multiple computers
@@ -266,7 +266,7 @@
   * ps -la : show all containers running, stopped, and terminated
   * start / stop : start or stop a container
   * kill : terminate a container
-
+ 
 ## Dockerfile Syntax
  * Start with FROM, often (but not always) end with CMD.  Specify how to build an image
  * Only FROM, RUN, ADD, and COPY add layers to the image
