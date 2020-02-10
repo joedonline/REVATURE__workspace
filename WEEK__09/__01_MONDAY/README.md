@@ -38,3 +38,37 @@
 #### On GitHub:
 - revaturelabs/ask-frontend
 - revaturelabs/ask-backend
+
+<br>
+
+#### Expertise:
+- Spring Profiles / Angular Frameworks
+- Angular modules (2 people)
+- Pipeline / deployment
+- Angular Template forms vs. Reactive forms
+- K8s
+
+<br>
+<br>
+<br>
+
+---
+# Kubernetes
+- #### Container Orchestration!
+  * Setup
+  * Specify config for many containers
+  * Let Kubernetes handle them
+    <br><br>
+
+- #### Pods: The Core of K8
+  * Contains at least one container
+  * Can have disk space as well
+    <br><br>
+
+- #### Deployment
+  * Specify what containers we want deployed
+    <br><br>
+
+- #### Service
+  * Setup a stable endpoint for some running containers
+    <br><br>
