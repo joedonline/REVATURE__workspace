@@ -17,42 +17,32 @@
 
 ---
 ### [WEEK 01 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__01)
-### [WEEK 01 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__01)
 
 ---
 ### [WEEK 02 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__02)
-### [WEEK 02 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__02)
 
 ---
 ### [WEEK 03 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__03)
-### [WEEK 03 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__03)
 
 ---
 ### [WEEK 04 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__04)
-### [WEEK 04 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__04)
 
 ---
 ### [WEEK 05 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__05)
-### [WEEK 05 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__05)
 
 ---
 ### [WEEK 06 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__06)
-### [WEEK 06 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__06)
 
 ---
 ### [WEEK 07 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__07)
-### [WEEK 07 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__07)
 
 ---
 ### [WEEK 08 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08)
-### [WEEK 08 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__08)
 
 ---
 ### [WEEK 09 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__09)
-### [WEEK 09 ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__09)
 
 ---
 ### [WEEK nn ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__nn)
-### [WEEK nn ( `delta` )](https://github.com/deltachannel/REVATURE__workspace/tree/master/WEEK__nn)
 
 ---
