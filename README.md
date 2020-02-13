@@ -22,25 +22,25 @@
 ### [WEEK 02 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__02) :: RDBMS, SQL, JDBC
 
 ---
-### [WEEK 03 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__03)
+### [WEEK 03 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__03) :: DB Review, HTML, CSS
 
 ---
-### [WEEK 04 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__04)
+### [WEEK 04 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__04) :: (some)Database Review, CSS
 
 ---
-### [WEEK 05 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__05)
+### [WEEK 05 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__05) :: SDLC
 
 ---
-### [WEEK 06 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__06)
+### [WEEK 06 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__06) :: Unix, EC2, AWS, DevOps, Jenkins
 
 ---
-### [WEEK 07 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__07)
+### [WEEK 07 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__07) :: All things Spring, REST, AOP
 
 ---
-### [WEEK 08 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08)
+### [WEEK 08 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__08) :: SOA, MSA, REST(more in-depth), SOAP
 
 ---
-### [WEEK 09 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__09)
+### [WEEK 09 ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__09) :: Scrum, Kubernetes(concise)
 
 ---
 ### [WEEK nn ( `github` )](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__nn)
