@@ -1,6 +1,6 @@
 #### :house: [REVATURE workspace, HOME (`github`)](https://github.com/joedonline/REVATURE__workspace)  :house:
 ---
-# :calendar: [WEEK nn](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__03)
+# :calendar: [WEEK 03](https://github.com/joedonline/REVATURE__workspace/tree/master/WEEK__03)
 ## Thursday, Jan. 2nd 2020
 
 ---
